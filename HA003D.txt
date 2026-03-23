@@ -1,0 +1,1694 @@
+./ ADD NAME=SCRNDEF
+***********************************************************************
+*  HA003D.SD     EXPORTED ON: 02/14/15 08:07:18    BY: Y#LJS93D       *
+***********************************************************************
+***********************************************************************
+*                LAST UPDATE: 02/14/15 08:06       BY: Y#LJS9         *
+***********************************************************************
+         TELON LANGLVL=5.0,LANG=COBOL,HEADER=HA,ID=003D
+***********************************************************************
+*                 D B 2    T A B L E S                                *
+***********************************************************************
+HATVAR   TABLE NAME=HAT_VAR_VARIANT,QUAL=DDHA102,                      C
+               DESC='CREATED BY DB2 CATALOG IMPORT',DCLCOPY=HATVAR,    C
+               DCLLBL=DCLHAT-VAR-VARIANT,COPY=NONE,SYNONYM=Y
+HATVAR   TLNROW
+         DCLCOL NAME=VAR_MODEL,TYPE=CHAR,LTH=00001,NOTNULL=Y,          C
+               ALIAS=VAR-MODEL,KEY=02,DCLHOST=VAR-MODEL
+         DCLCOL NAME=VAR_TYPE,TYPE=CHAR,LTH=00004,NOTNULL=Y,           C
+               ALIAS=VAR-TYPE,KEY=03,DCLHOST=VAR-TYPE
+         DCLCOL NAME=VAR_START_DATE,TYPE=DATE,LTH=00010,NOTNULL=Y,     C
+               ALIAS=VAR-START-DATE,KEY=04,DCLHOST=VAR-START-DATE
+         DCLCOL NAME=VAR_END_DATE,TYPE=DATE,LTH=00010,NOTNULL=Y,       C
+               ALIAS=VAR-END-DATE,KEY=05,DCLHOST=VAR-END-DATE
+         DCLCOL NAME=VAR_VARIANT,TYPE=CHAR,LTH=00006,NOTNULL=Y,        C
+               ALIAS=VAR-VARIANT,KEY=06,DCLHOST=VAR-VARIANT
+         DCLCOL NAME=VAR_ENGINE,TYPE=CHAR,LTH=00012,NOTNULL=Y,         C
+               ALIAS=VAR-ENGINE,DCLHOST=VAR-ENGINE
+         DCLCOL NAME=VAR_AXLES_COC_VAL,TYPE=CHAR,LTH=00075,NOTNULL=Y,  C
+               ALIAS=VAR-AXLES-COC-VAL,DCLHOST=VAR-AXLES-COC-VAL
+         DCLCOL NAME=VAR_USERID,TYPE=CHAR,LTH=00008,NOTNULL=Y,         C
+               ALIAS=VAR-USERID,DCLHOST=VAR-USERID
+         DCLCOL NAME=VAR_TIMESTAMP,TYPE=TIMESTAMP,LTH=00026,NOTNULL=Y, C
+               ALIAS=VAR-TIMESTAMP,DCLHOST=VAR-TIMESTAMP
+         DCLCOL NAME=VAR_COC_MAX_POWER,TYPE=CHAR,LTH=00015,NOTNULL=Y,  C
+               ALIAS=VAR-COC-MAX-POWER,DCLHOST=VAR-COC-MAX-POWER
+         DCLCOL NAME=VAR_COC_FUEL,TYPE=CHAR,LTH=00015,NOTNULL=Y,       C
+               ALIAS=VAR-COC-FUEL,DCLHOST=VAR-COC-FUEL
+         DCLCOL NAME=VAR_COC_CAP,TYPE=CHAR,LTH=00006,NOTNULL=Y,        C
+               ALIAS=VAR-COC-CAP,DCLHOST=VAR-COC-CAP
+         DCLCOL NAME=VAR_COC_NO_ARR_CYL,TYPE=CHAR,LTH=00012,NOTNULL=Y, C
+               ALIAS=VAR-COC-NO-ARR-CYL,DCLHOST=VAR-COC-NO-ARR-CYL
+         DCLCOL NAME=VAR_COC_DIRECT_INJ,TYPE=CHAR,LTH=00004,NOTNULL=Y, C
+               ALIAS=VAR-COC-DIRECT-INJ,DCLHOST=VAR-COC-DIRECT-INJ
+         DCLCOL NAME=VAR_COC_WRK_PRIN,TYPE=CHAR,LTH=00050,NOTNULL=Y,   C
+               ALIAS=VAR-COC-WRK-PRIN,DCLHOST=VAR-COC-WRK-PRIN
+         DCLCOL NAME=VAR_COC_ENG_CODE,TYPE=CHAR,LTH=00015,NOTNULL=Y,   C
+               ALIAS=VAR-COC-ENG-CODE,DCLHOST=VAR-COC-ENG-CODE
+         DCLCOL NAME=VAR_COC_ENG_MAN,TYPE=CHAR,LTH=00025,NOTNULL=Y,    C
+               ALIAS=VAR-COC-ENG-MAN,DCLHOST=VAR-COC-ENG-MAN
+         DCLCOL NAME=VAR_COC_ANNEX,TYPE=CHAR,LTH=00025,NOTNULL=Y,      C
+               ALIAS=VAR-COC-ANNEX,DCLHOST=VAR-COC-ANNEX
+         DCLCOL NAME=VAR_MANF,TYPE=CHAR,LTH=00001,NOTNULL=Y,           C
+               ALIAS=VAR-MANF,KEY=01,DCLHOST=VAR-MANF
+         DCLCOL NAME=VAR_CHIP_DATA,TYPE=CHAR,LTH=00001,NOTNULL=Y,      C
+               ALIAS=VAR-CHIP-DATA,DCLHOST=VAR-CHIP-DATA
+         DCLCOL NAME=VAR_GEN_TYR_LIST,TYPE=CHAR,LTH=00001,NOTNULL=Y,   C
+               ALIAS=VAR-GEN-TYR-LIST,DCLHOST=VAR-GEN-TYR-LIST
+         DCLCOL NAME=VAR_NEWMOD_ACTMAS,TYPE=CHAR,LTH=00001,NOTNULL=Y,  C
+               ALIAS=VAR-NEWMOD-ACTMAS-IND,DCLHOST=VAR-NEWMOD-ACTMAS
+HATTL1   TABLE NAME=HAT_TL1_TELONHLD,QUAL=DDHA102,                     C
+               DESC='CREATED BY DB2 CATALOG IMPORT',DCLCOPY=HATTL1,    C
+               DCLLBL=DCLHAT-TL1-TELONHLD,COPY=NONE,SYNONYM=Y
+HATTL1   TLNROW
+         DCLCOL NAME=TL1_USERID,TYPE=CHAR,LTH=00008,NOTNULL=Y,         C
+               ALIAS=TL1-USERID,KEY=Y,DCLHOST=TL1-USERID
+         DCLCOL NAME=TL1_TYPE,TYPE=CHAR,LTH=00001,NOTNULL=Y,           C
+               ALIAS=TL1-TYPE,KEY=Y,DCLHOST=TL1-TYPE
+         DCLCOL NAME=TL1_LEVEL,TYPE=SMALLINT,LTH=00002,NOTNULL=Y,      C
+               ALIAS=TL1-LEVEL,KEY=Y,DCLHOST=TL1-LEVEL
+         DCLCOL NAME=TL1_PGM_ID,TYPE=CHAR,LTH=00004,NOTNULL=Y,         C
+               ALIAS=TL1-PGM-ID,DCLHOST=TL1-PGM-ID
+         DCLCOL NAME=TL1_DATA,TYPE=LONGVARCHAR,LTH=04030,NOTNULL=Y,    C
+               ALIAS=TL1-DATA,DCLHOST=TL1-DATA
+HATVAC   TABLE NAME=HAT_VAC_VARIANT,QUAL=DDHA102,                      C
+               DESC='CREATED BY DB2 CATALOG IMPORT',DCLCOPY=HATVAC,    C
+               DCLLBL=DCLHAT-VAC-VARIANT,COPY=NONE,SYNONYM=Y
+HATVAC   TLNROW
+         DCLCOL NAME=VAC_MANF,TYPE=CHAR,LTH=00001,NOTNULL=Y,           C
+               ALIAS=VAC-MANF,KEY=Y,DCLHOST=VAC-MANF
+         DCLCOL NAME=VAC_MODEL,TYPE=CHAR,LTH=00001,NOTNULL=Y,          C
+               ALIAS=VAC-MODEL,KEY=Y,DCLHOST=VAC-MODEL
+         DCLCOL NAME=VAC_TYPE,TYPE=CHAR,LTH=00004,NOTNULL=Y,           C
+               ALIAS=VAC-TYPE,KEY=Y,DCLHOST=VAC-TYPE
+         DCLCOL NAME=VAC_START_DATE,TYPE=DATE,LTH=00010,NOTNULL=Y,     C
+               ALIAS=VAC-START-DATE,KEY=Y,DCLHOST=VAC-START-DATE
+         DCLCOL NAME=VAC_END_DATE,TYPE=DATE,LTH=00010,NOTNULL=Y,       C
+               ALIAS=VAC-END-DATE,KEY=Y,DCLHOST=VAC-END-DATE
+         DCLCOL NAME=VAC_VARIANT,TYPE=CHAR,LTH=00006,NOTNULL=Y,        C
+               ALIAS=VAC-VARIANT,KEY=Y,DCLHOST=VAC-VARIANT
+         DCLCOL NAME=VAC_FIELD_NO,TYPE=CHAR,LTH=00005,NOTNULL=Y,       C
+               ALIAS=VAC-FIELD-NO,KEY=Y,DCLHOST=VAC-FIELD-NO
+         DCLCOL NAME=VAC_SUB_FIELD,TYPE=CHAR,LTH=00003,NOTNULL=Y,      C
+               ALIAS=VAC-SUB-FIELD,KEY=Y,DCLHOST=VAC-SUB-FIELD
+         DCLCOL NAME=VAC_VALUE,TYPE=CHAR,LTH=00075,NOTNULL=Y,          C
+               ALIAS=VAC-VALUE,DCLHOST=VAC-VALUE
+         DCLCOL NAME=VAC_USERID,TYPE=CHAR,LTH=00008,NOTNULL=Y,         C
+               ALIAS=VAC-USERID,DCLHOST=VAC-USERID
+         DCLCOL NAME=VAC_TIMESTAMP,TYPE=TIMESTAMP,LTH=00026,NOTNULL=Y, C
+               ALIAS=VAC-TIMESTAMP,DCLHOST=VAC-TIMESTAMP
+***********************************************************************
+*    SCREEN DESCRIPTION ~~ UPDATE COC CONTENT (TYPE/ VARIANT)         *
+***********************************************************************
+         SCREEN 003D,HEADER=HA,                                        C
+               DESC='UPDATE COC CONTENT (TYPE/ VARIANT)',              C
+               CRTDATE=120130,UPDDATE=150214,UPDTIME=0806,             C
+               UPDUSER=Y#LJS9,PFKEYS=(1,3,5,6,7,8,11,OTH),             C
+               SECTION=(HAZ300I,HAZ300T,HAZ600T,HAZ700T,HAZ800T,       C
+               HAVAL2A),WKAREA=WKAREA,XFERWKA=(HASPA001,HASP003D),     C
+               LANG=COBOL,CURSOR=ENCODE,CONSIS=CONSIS,CAPS=OFF,        C
+               FLDEDIT=FLDEDIT,OINIT1=OINIT1,REMARKS=REMARKS,          C
+               ININIT1=ININIT1,INTERM=INTERM,OUTTERM=OUTTERM,ALARM=N,  C
+               EOFKEY=Y,HELP=Y,HOLD=Y,OUTIFIL=UNDERLINE,REFRESH=Y,     C
+               EATTR=Y,EAIN=(GREEN,),EAERR=(RED,),EALIT=(TURQ,),       C
+               EAOUT=(NEUTRAL,),UPDTA=N
+***********************************************************************
+*                   D A T A   A C C E S S                             *
+***********************************************************************
+HATVAR   DB2 TBLQUAL=DDHA102,TBLNAME=HAT_VAR_VARIANT,SYNONYM=Y
+HATVAR   ROW @DEFINE,TBLQUAL=DDHA102,TBLNAME=HAT_VAR_VARIANT
+         READ HATVAR,WHERE=(VAR_MODEL,=,:SPA-MODEL,AND,VAR_TYPE,=,     C
+               :SPA-TYPE,AND,VAR_START_DATE,=,:WS-SDATE-DB2,AND,       C
+               VAR_END_DATE,=,:WS-EDATE-DB2,AND,VAR_VARIANT,=,         C
+               :SPA-VARIANT,AND,VAR_MANF,=,:SPA-MANF-CODE),            C
+               CPYCALL=HATVARRD
+         READNEXT HATVAR,WHERE=(VAR_MODEL,=,:SPA-MODEL,AND,VAR_TYPE,   C
+               =,:SPA-TYPE,AND,VAR_START_DATE,=,:WS-SDATE-DB2,AND,     C
+               VAR_END_DATE,=,:WS-EDATE-DB2,AND,VAR_TIMESTAMP,=,       C
+               :SPA-P-VAR-TIMESTAMP,AND,VAR_VARIANT,=,:SPA-VARIANT,    C
+               AND,VAR_MANF,=,:SPA-MANF-CODE),CPYCALL=HATVARRN
+         UPDATE HATVAR,CPYCALL=HATVARUP
+*
+HATTL1   DB2 TBLQUAL=DDHA102,TBLNAME=HAT_TL1_TELONHLD,SYNONYM=Y
+HATTL1   ROW @HOLD,TBLQUAL=DDHA102,TBLNAME=HAT_TL1_TELONHLD
+AUTOEXEC HOLD HATTL1
+*
+HATVAC   DB2 TBLQUAL=DDHA102,TBLNAME=HAT_VAC_VARIANT,SYNONYM=Y
+HATVAC   ROW @DEFINE,TBLQUAL=DDHA102,TBLNAME=HAT_VAC_VARIANT
+         CREATE HATVAC
+READNXT1 READNEXT HATVAC,CPYKEY=R1HATVAC
+READNXT2 READNEXT HATVAC,CPYKEY=R2HATVAC
+         UPDATE HATVAC,SENCOLS=(VAC_VALUE,VAC_USERID,VAC_TIMESTAMP),   C
+               CPYKEY=UPHATVAC
+***********************************************************************
+         PANEL CRTDATE=120130,UPDDATE=141127,UPDTIME=0748,             C
+               UPDUSER=Y#LJS9,SIZE=(024,080),UPRLWR=L
+***********************************************************************
+*                     L I T E R A L S                                 *
+***********************************************************************
+         FIELD LITERAL,POS=(01,002),                                   C
+               TEXT='WVTA  HA003D 10 Update CoC Content (Type/Variant)'
+         FIELD LITERAL,POS=(03,056),TEXT='Page No 03'
+         FIELD LITERAL,POS=(04,002),TEXT='Typ  Var.'
+         FIELD LITERAL,POS=(04,015),                                   C
+               TEXT='Approval Date/No. Type Description'
+         FIELD LITERAL,POS=(04,063),TEXT='Engine'
+         FIELD LITERAL,POS=(08,002),TEXT='Engine Code'
+         FIELD LITERAL,POS=(09,002),TEXT='Engine Manufacturer'
+         FIELD LITERAL,POS=(10,002),TEXT='Working Principle'
+         FIELD LITERAL,POS=(13,002),TEXT='Direct injection'
+         FIELD LITERAL,POS=(14,002),TEXT='No and Arrangement of'
+         FIELD LITERAL,POS=(15,002),TEXT='Cylinders'
+         FIELD LITERAL,POS=(16,002),TEXT='Fuel'
+         FIELD LITERAL,POS=(17,002),TEXT='Capacity'
+         FIELD LITERAL,POS=(18,002),TEXT='Max Net Power'
+         FIELD LITERAL,POS=(19,003),                                   C
+               TEXT='(internal combustion engine):'
+         FIELD LITERAL,POS=(20,002),                                   C
+               TEXT='Max Hourly Output (electric):'
+         FIELD LITERAL,POS=(21,002),TEXT='Max Net Power (electric):'
+         FIELD LITERAL,POS=(22,002),TEXT='Max 30min Power (electric):'
+         FIELD LITERAL,POS=(24,002),                                   C
+               TEXT='PFK8 to view Update CoC Content (Type/Variant) HA0C
+               03A'
+***********************************************************************
+*                     V A R I A B L E S                               *
+***********************************************************************
+DATE     FIELD OUTPUT,POS=(01,072),LTH=008,DBNAME=SPA-TODAYS-DATE,     C
+               EACOLOR=TURQ
+ERRMSG1  FIELD OUTPUT,POS=(02,002),LTH=077,FLDTYPE=NONE,EACOLOR=RED,   C
+               ATTRINT=HIGH
+TYPE     FIELD OUTPUT,POS=(05,002),LTH=004,DBNAME=SPA-TYPE
+VARIANT  FIELD OUTPUT,POS=(05,007),LTH=006,DBNAME=SPA-VARIANT
+APPRDATE FIELD OUTPUT,POS=(05,015),LTH=010,DBNAME=SPA-APPR-DATE
+TYPDES   FIELD OUTPUT,POS=(05,033),LTH=028,DBNAME=SPA-TYP-DES
+ENGINE   FIELD OUTPUT,POS=(05,063),LTH=015,DBNAME=SPA-ENGINE
+APPRNO   FIELD OUTPUT,POS=(06,015),LTH=025,DBNAME=SPA-APPROVAL-NO
+ENCODE   FIELD OUTIN,POS=(08,025),LTH=015,DBNAME=SPA-ENGINE-CODE
+ENMANU   FIELD OUTIN,POS=(09,025),LTH=040,                             C
+               DBNAME=SPA-ENGINE-MANUFACTURER
+WORKPRIN FIELD OUTIN,POS=(10,025),LTH=025,DBNAME=SPA-WORKING-PRINCIPLE
+ENGCYCL  FIELD OUTPUT,POS=(11,003),LTH=014,DBNAME=WS-ENGINE-CYCLE-LIT, C
+               EACOLOR=TURQ
+ENGCYC   FIELD OUTIN,POS=(11,025),LTH=025,DBNAME=SPA-ENGINE-CYCLE
+ENGIGNL  FIELD OUTPUT,POS=(12,003),LTH=019,                            C
+               DBNAME=WS-ENGINE-IGNITION-LIT,EACOLOR=TURQ
+ENGIGN   FIELD OUTIN,POS=(12,025),LTH=025,DBNAME=SPA-ENGINE-IGNITION
+DIRINJEC FIELD OUTIN,POS=(13,025),LTH=004,DBNAME=SPA-DIRECT-INJECTION
+NOARRCYL FIELD OUTIN,POS=(15,025),LTH=012,DBNAME=SPA-NO-ARR-CYLINDERS
+FUEL     FIELD OUTIN,POS=(16,025),LTH=015,DBNAME=SPA-FUEL
+CAPACITY FIELD OUTIN,POS=(17,025),LTH=006,DBNAME=SPA-CAPACITY
+POWER    FIELD OUTIN,POS=(19,035),LTH=015,DBNAME=SPA-MAX-NET-POWER
+HOUROP   FIELD OUTIN,POS=(20,035),LTH=008,                             C
+               DBNAME=SPA-MAX-HOURLY-OP-ELEC
+MXNETPE  FIELD OUTIN,POS=(21,035),LTH=008,                             C
+               DBNAME=SPA-MAX-NET-POWER-ELEC
+MX30PE   FIELD OUTIN,POS=(22,035),LTH=008,                             C
+               DBNAME=SPA-MAX-30MIN-PWR-ELEC
+         IMSPGM CONVERS=Y,SPASIZE=05120,TRANCDE=HAIM003D,LINKOPT=D,    C
+               SPACMPT=Y,TRACE=Y,GENPCBS=Y,MSGPGM=ANY,A4EMSG=WS-A4EMSG
+         IMSPSB
+         IMSMFS TRANCDE=HAIM003D
+         END
+./ ADD NAME=CONSIS
+      *    VALIDATE FIELD FORMATS
+MD08       MOVE ZERO      TO WS-ERR1                                    02070000
+MD08                                                                    02080000
+JA009 *******************************************************           02090000
+JA009 * FOR LAND ROVER ONLY:                                *           02100000
+JA009 * CHECK ENGINE / CYCLE  FIELD DOES NOT CONTAIN COMMAS *           02110000
+JA009 * AND DETERMINE LENTH OF ENGINE / CYCLE FIELD         *           02120000
+JA009 *******************************************************           02130000
+JA009 *                                                                 02140000
+JA009      IF SPA-MANF-CODE = 'J'                                       02150000
+           AND SPA-SDATE > '2007-08-01'                                 02160000
+JA009         MOVE +25 TO WS-MAX-LENGTH                                 02170000
+JA009                     WS-COUNT                                      02180000
+JA009         MOVE +0  TO WS-ENGCYC-MAX                                 02190000
+JA009         MOVE 'N' TO WS-COMMA-INDICATOR                            02200000
+JA009         PERFORM UNTIL WS-COUNT = 0                                02210000
+JA009           IF WS-COMMA-NOT-FOUND                                   02220000
+JA009            AND TPI-ENGCYC (WS-COUNT:1) = ','                      02230000
+JA009              SET WS-COMMA-FOUND     TO TRUE                       02240000
+JA009           END-IF                                                  02250000
+JA009           IF WS-ENGCYC-MAX = 0                                    02260000
+JA009            AND TPI-ENGCYC (WS-COUNT:1) NOT = SPACES               02270000
+JA009              MOVE WS-COUNT TO WS-ENGCYC-MAX                       02280000
+JA009           END-IF                                                  02290000
+JA009           SUBTRACT 1 FROM WS-COUNT                                02300000
+JA009         END-PERFORM                                               02310000
+JA009         IF WS-COMMA-FOUND                                         02320000
+JA009            MOVE ERROR-ATTR    TO TPO-ENGCYC-ATTR                  02330000
+JA009            ADD  1             TO WS-ERR1                          02340000
+JA009         END-IF                                                    02350000
+JA009      END-IF                                                       02360000
+JA009 *                                                                 02370000
+JA009 *******************************************************           02380000
+JA009 * FOR LAND ROVER ONLY:                                *           02390000
+JA009 * CHECK ENGINE / CYCLE  FIELD DOES NOT CONTAIN COMMAS *           02400000
+JA009 * AND DETERMINE LENTH OF ENGINE / CYCLE FIELD         *           02410000
+JA009 *******************************************************           02420000
+JA009 *                                                                 02430000
+JA009      IF SPA-MANF-CODE = 'L'                                       02440000
+JA009         MOVE +25 TO WS-MAX-LENGTH                                 02450000
+JA009                     WS-COUNT                                      02460000
+JA009         MOVE +0  TO WS-ENGCYC-MAX                                 02470000
+JA009         MOVE 'N' TO WS-COMMA-INDICATOR                            02480000
+JA009         PERFORM UNTIL WS-COUNT = 0                                02490000
+JA009           IF WS-COMMA-NOT-FOUND                                   02500000
+JA009            AND TPI-ENGCYC (WS-COUNT:1) = ','                      02510000
+JA009              SET WS-COMMA-FOUND     TO TRUE                       02520000
+JA009           END-IF                                                  02530000
+JA009           IF WS-ENGCYC-MAX = 0                                    02540000
+JA009            AND TPI-ENGCYC (WS-COUNT:1) NOT = SPACES               02550000
+JA009              MOVE WS-COUNT TO WS-ENGCYC-MAX                       02560000
+JA009           END-IF                                                  02570000
+JA009           SUBTRACT 1 FROM WS-COUNT                                02580000
+JA009         END-PERFORM                                               02590000
+JA009         IF WS-COMMA-FOUND                                         02600000
+JA009            MOVE ERROR-ATTR    TO TPO-ENGCYC-ATTR                  02610000
+JA009            ADD  1             TO WS-ERR1                          02620000
+JA009         END-IF                                                    02630000
+JA009      END-IF                                                       02640000
+JA009 *                                                                 02650000
+JA009 *                                                                 02660000
+JA009 ***********************************************************       02670000
+JA009 * FOR LAND ROVER ONLY:                                    *       02680000
+JA009 * CHECK ENG. IGN. PRINCIPLE FIELD DOES NOT CONTAIN COMMAS *       02690000
+JA009 * AND DETERMINE LENTH OF ENG. IGN. PRINCIPLE FIELD        *       02700000
+JA009 ***********************************************************       02710000
+JA009 *                                                                 02720000
+JA009      IF SPA-MANF-CODE = 'J'                                       02730000
+           AND SPA-SDATE > '2007-08-01'                                 02740000
+JA009         MOVE +25 TO WS-MAX-LENGTH                                 02750000
+JA009                     WS-COUNT                                      02760000
+JA009         MOVE +0  TO WS-ENGIGN-MAX                                 02770000
+JA009         MOVE 'N' TO WS-COMMA-INDICATOR                            03010000
+JA009         PERFORM UNTIL WS-COUNT = 0                                03020000
+JA009           IF WS-COMMA-NOT-FOUND                                   03030000
+JA009            AND TPI-ENGIGN (WS-COUNT:1) = ','                      03040000
+JA009              SET WS-COMMA-FOUND     TO TRUE                       03050000
+JA009           END-IF                                                  03060000
+JA009           IF WS-ENGIGN-MAX = 0                                    03070000
+JA009            AND TPI-ENGIGN (WS-COUNT:1) NOT = SPACES               03080000
+JA009              MOVE WS-COUNT TO WS-ENGIGN-MAX                       03090000
+JA009           END-IF                                                  03100000
+JA009           SUBTRACT 1 FROM WS-COUNT                                03110000
+JA009         END-PERFORM                                               03120000
+JA009         IF WS-COMMA-FOUND                                         03130000
+JA009            MOVE ERROR-ATTR    TO TPO-ENGIGN-ATTR                  03140000
+JA009            ADD  1             TO WS-ERR1                          03150000
+JA009         END-IF                                                    03160000
+JA009      END-IF                                                       03170000
+MD08  *                                                                 03180000
+JA009 *                                                                 03190000
+JA009 ***********************************************************       03200000
+JA009 * FOR LAND ROVER ONLY:                                    *       03210000
+JA009 * CHECK ENG. IGN. PRINCIPLE FIELD DOES NOT CONTAIN COMMAS *       03220000
+JA009 * AND DETERMINE LENTH OF ENG. IGN. PRINCIPLE FIELD        *       03230000
+JA009 ***********************************************************       03240000
+JA009 *                                                                 03250000
+JA009      IF SPA-MANF-CODE = 'L'                                       03260000
+JA009         MOVE +25 TO WS-MAX-LENGTH                                 03270000
+JA009                     WS-COUNT                                      03280000
+JA009         MOVE +0  TO WS-ENGIGN-MAX                                 03290000
+JA009         MOVE 'N' TO WS-COMMA-INDICATOR                            03300000
+JA009         PERFORM UNTIL WS-COUNT = 0                                03310000
+JA009           IF WS-COMMA-NOT-FOUND                                   03320000
+JA009            AND TPI-ENGIGN (WS-COUNT:1) = ','                      03330000
+JA009              SET WS-COMMA-FOUND     TO TRUE                       03340000
+JA009           END-IF                                                  03350000
+JA009           IF WS-ENGIGN-MAX = 0                                    03360000
+JA009            AND TPI-ENGIGN (WS-COUNT:1) NOT = SPACES               03370000
+JA009              MOVE WS-COUNT TO WS-ENGIGN-MAX                       03380000
+JA009           END-IF                                                  03390000
+JA009           SUBTRACT 1 FROM WS-COUNT                                03400000
+JA009         END-PERFORM                                               03410000
+JA009         IF WS-COMMA-FOUND                                         03420000
+JA009            MOVE ERROR-ATTR    TO TPO-ENGIGN-ATTR                  03430000
+JA009            ADD  1             TO WS-ERR1                          03440000
+JA009         END-IF                                                    03450000
+JA009      END-IF                                                       03460000
+MD08  *                                                                 03470000
+MD08  ****************************                                      03480000
+MD08  * VALIDATE CAPACITY  20:1                                         03490000
+MD08  ****************************                                      03500000
+MD08       IF TPI-CAPACITY NOT = SPACES                                 03510000
+MD08          MOVE TPI-CAPACITY TO VF-IN                                03520000
+MD08          MOVE 'H'          TO VF-TEMPLATE                          03530000
+MD08          PERFORM VALIDATE-FORMAT                                   03540000
+MD08          IF VF-STATUS = 1                                          03550000
+MD08             MOVE 'NNN'        TO VF-TEMPLATE                       03560000
+MD08             PERFORM VALIDATE-FORMAT                                03570000
+MD08          END-IF                                                    03580000
+MD08          IF VF-STATUS = 1                                          03590000
+MD08             MOVE 'NNNN'       TO VF-TEMPLATE                       03600000
+MD08             PERFORM VALIDATE-FORMAT                                03610000
+MD08          END-IF                                                    03620000
+MD08  * CHECK THAT THE CAPACITY DATA MATCHES A REQUIRED TEMPLATE        03630000
+MD08          IF VF-STATUS = 1                                          03640000
+MD08             MOVE ERROR-ATTR      TO TPO-CAPACITY-ATTR              03650000
+MD08             ADD 1                TO WS-ERR1                        03660000
+MD08          END-IF                                                    03670000
+MD08       END-IF.                                                      03680000
+MD08                                                                    03690000
+MD08  ****************************                                      03700000
+MD08  * VALIDATE POWER     22:1                                         03710000
+MD08  ****************************                                      03720000
+MD08       IF TPI-POWER NOT = SPACES                                    03730000
+MD08          MOVE TPI-POWER    TO VF-IN                                03740000
+MD08          MOVE 'H'          TO VF-TEMPLATE                          03750000
+MD08          PERFORM VALIDATE-FORMAT                                   03760000
+MD08          IF VF-STATUS = 1                                          03770000
+MD08             MOVE 'NNNDNTNNNN'  TO VF-TEMPLATE                      04010000
+MD08             PERFORM VALIDATE-FORMAT                                04020000
+MD08          END-IF                                                    04030000
+MD08          IF VF-STATUS = 1                                          04040000
+MD08             MOVE 'NNDNTNNNN'   TO VF-TEMPLATE                      04050000
+MD08             PERFORM VALIDATE-FORMAT                                04060000
+MD08          END-IF                                                    04070000
+MD08          IF VF-STATUS = 1                                          04080000
+MD08             IF WS-SDATE-NUM < 20040301                             04090000
+MD08                MOVE 'NNTNNNN'   TO VF-TEMPLATE                     04100000
+MD08                PERFORM VALIDATE-FORMAT                             04110000
+MD08                IF VF-STATUS = 1                                    04120000
+MD08                   MOVE 'NNNTNNNN'  TO VF-TEMPLATE                  04130000
+MD08                   PERFORM VALIDATE-FORMAT                          04140000
+MD08                END-IF                                              04150000
+MD08             END-IF                                                 04160000
+MD08          END-IF                                                    04170000
+MD08  * CHECK THAT THE POWER DATA MATCHES A REQUIRED TEMPLATE           04180000
+MD08          IF VF-STATUS = 1                                          04190000
+MD08             MOVE ERROR-ATTR    TO TPO-POWER-ATTR                   04200000
+MD08             ADD 1              TO WS-ERR1                          04210000
+MD08          END-IF                                                    04220000
+MD08       END-IF.                                                      04230000
+MD08                                                                    04240000
+MD08  ****************************                                      04250000
+MD08  * VALIDATE NOARRCYL  19:1                                         04260000
+MD08  ****************************                                      04270000
+MD08       IF TPI-NOARRCYL  NOT = SPACES                                04280000
+MD08          MOVE TPI-NOARRCYL  TO VF-IN                               04290000
+MD08          MOVE 'H'           TO VF-TEMPLATE                         04300000
+MD08          PERFORM VALIDATE-FORMAT                                   04310000
+MD08          IF VF-STATUS = 1                                          04320000
+MD08             IF WS-SDATE-NUM < 20040301                             04330000
+MD08                MOVE TPI-NOARRCYL       TO VF-IN                    04340000
+MD08                MOVE 'NX'               TO VF-TEMPLATE              04350000
+MD08                PERFORM VALIDATE-FORMAT                             04360000
+MD08             ELSE                                                   04370000
+MD08                MOVE TPI-NOARRCYL       TO VF-IN                    04380000
+MD08                MOVE 'NCX'              TO VF-TEMPLATE              04390000
+MD08                PERFORM VALIDATE-FORMAT                             04400000
+MD08                IF VF-STATUS = 1                                    04410000
+MD08                   MOVE TPI-NOARRCYL      TO VF-IN                  04420000
+MD08                   MOVE 'NNCX'            TO VF-TEMPLATE            04430000
+MD08                   PERFORM VALIDATE-FORMAT                          04440000
+MD08                END-IF                                              04450000
+MD08             END-IF                                                 04460000
+MD08          END-IF                                                    04470000
+MD08  * CHECK THAT THE NOARRCYL DATA MATCHES A REQUIRED TEMPLATE        04480000
+MD08          IF VF-STATUS = 1                                          04490000
+MD08             MOVE ERROR-ATTR      TO TPO-NOARRCYL-ATTR              04500000
+MD08             ADD 1                TO WS-ERR1                        04510000
+MD08          END-IF                                                    04520000
+MD08       END-IF.                                                      04530000
+JJ011                                                                   03690000
+JJ011 ******************************************                        03700000
+JJ011 * VALIDATE HOURLY POWER ELECTRIC     22:4                         03710000
+JJ011 ******************************************                        03720000
+JJ011      IF TPI-HOUROP NOT = SPACES                                   03730000
+JJ011         MOVE TPI-HOUROP    TO VF-IN                               03740000
+JJ011         MOVE 'H'          TO VF-TEMPLATE                          03750000
+JJ011         PERFORM VALIDATE-FORMAT                                   03760000
+JJ011 * CHECK THAT THE POWER DATA MATCHES A REQUIRED TEMPLATE           04180000
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNNDNN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNNDN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNN'   TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNDNN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNDN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NN'   TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NDNN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NDN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'N'   TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ011         IF VF-STATUS = 1                                          04190000
+JJ011            MOVE ERROR-ATTR    TO TPO-HOUROP-ATTR                  04200000
+JJ011            ADD 1              TO WS-ERR1                          04210000
+JJ011         END-IF                                                    04220000
+JJ011      END-IF.                                                      04230000
+JJ011                                                                   03690000
+JJ011 ***************************************                           03700000
+JJ011 * VALIDATE NET POWER ELECTRIC     22:5                            03710000
+JJ011 ***************************************                           03720000
+JJ011      IF TPI-MXNETPE NOT = SPACES                                  03730000
+JJ011         MOVE TPI-MXNETPE    TO VF-IN                              03740000
+JJ011         MOVE 'H'          TO VF-TEMPLATE                          03750000
+JJ011         PERFORM VALIDATE-FORMAT                                   03760000
+JJ011 * CHECK THAT THE POWER DATA MATCHES A REQUIRED TEMPLATE           04180000
+JJ011         IF VF-STATUS = 1
+JJ012            MOVE 'NNNDNN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNNDN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNN'   TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNDNN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNDN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NN'   TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NDNN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NDN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'N'   TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ011         IF VF-STATUS = 1                                          04190000
+JJ011            MOVE ERROR-ATTR    TO TPO-MXNETPE-ATTR                 04200000
+JJ011            ADD 1              TO WS-ERR1                          04210000
+JJ011         END-IF                                                    04220000
+JJ011      END-IF.                                                      04230000
+JJ011                                                                   03690000
+JJ011 ******************************************                        03700000
+JJ011 * VALIDATE 30MIN POWER ELECTRIC     22:6                          03710000
+JJ011 ******************************************                        03720000
+JJ011      IF TPI-MX30PE NOT = SPACES                                   03730000
+JJ011         MOVE TPI-MX30PE    TO VF-IN                               03740000
+JJ011         MOVE 'H'          TO VF-TEMPLATE                          03750000
+JJ011         PERFORM VALIDATE-FORMAT                                   03760000
+JJ011 * CHECK THAT THE POWER DATA MATCHES A REQUIRED TEMPLATE           04180000
+JJ011         IF VF-STATUS = 1
+JJ012            MOVE 'NNNDNN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNNDN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNN'   TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNDNN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NNDN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NN'   TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NDNN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'NDN'  TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ012         IF VF-STATUS = 1
+JJ012            MOVE 'N'   TO VF-TEMPLATE
+JJ012            PERFORM VALIDATE-FORMAT
+JJ012         END-IF
+JJ011 * CHECK THAT THE POWER DATA MATCHES A REQUIRED TEMPLATE           04180000
+JJ011         IF VF-STATUS = 1                                          04190000
+JJ011            MOVE ERROR-ATTR    TO TPO-MX30PE-ATTR                  04200000
+JJ011            ADD 1              TO WS-ERR1                          04210000
+JJ011         END-IF                                                    04220000
+JJ011      END-IF.                                                      04230000
+MD08                                                                    04240000
+MD08  * CHECK IF ANY OF THE FIELDS HAVE FAILED THE FORMAT CHECKS        04550000
+MD08       IF WS-ERR1 > ZERO                                            04560000
+MD08          MOVE DO-WRITE-LIT TO CONTROL-INDICATOR                    04570000
+MD08          MOVE WS-E305-ERROR-MSG TO TPO-ERRMSG1                     04580000
+MD08  *                                                                 04590000
+MD08          PERFORM B-100-OUTPUT-EDITS                                04600000
+MD08  *                                                                 04610000
+MD08          GO TO X-100-CONSIS-EDITS-RETURN                           04620000
+MD08       END-IF.                                                      04630000
+./ ADD NAME=FLDEDIT
+JA009 **** ENGINE / CYCLE AND ENG. IGN. PRINCIPLE ARE REQUIRED FIELD IF 04650000
+JA009 **** IF EITHER OF THEM ARE ENTERED (LAND ROVER ONLY)              04660000
+JA009        IF SPA-MANF-CODE = 'L'                                     04670000
+JA009          AND (TPO-ENGCYC NOT = SPACES                             04680000
+JA009          AND  TPO-ENGIGN = SPACES)                                04690000
+JA009          OR  (TPO-ENGCYC = SPACES                                 04700000
+JA009          AND  TPO-ENGIGN NOT = SPACES)                            04710000
+JA009           MOVE WS-E039-ERROR-MSG TO TPO-ERRMSG1                   04720000
+JA009           MOVE ERROR-ATTR       TO TPO-ENGCYC-ATTR                04730000
+JA009           MOVE ERROR-ATTR       TO TPO-ENGIGN-ATTR                04740000
+JA009           MOVE DO-WRITE-LIT     TO CONTROL-INDICATOR              04750000
+JA009           GO TO E-100-INPUT-EDITS-RETURN                          04760000
+JA009        END-IF.                                                    04770000
+./ ADD NAME=HAPFK6
+                                                                        05020000
+      ****************************************************************  05030000
+      *                                                              *  05040000
+      *     PROCESS PFKEY 6  FOR SCREEN HA003U                       *  05050000
+      *                                                              *  05060000
+      ****************************************************************  05070000
+             IF PFK6                                                    05080000
+                MOVE '003U' TO NEXT-PROGRAM-NAME-ID                     05090000
+                MOVE DO-TRANSFER-LIT TO CONTROL-INDICATOR               05100000
+                GO TO P-100-PFKEYS-RETURN                               05110000
+             END-IF.                                                    05120000
+./ ADD NAME=HAPFK7
+      *    PF7 PROCESSING                                               05140000
+      *    PFK7 AND PFK 6 PROCESSING                                    05150000
+                                                                        05160000
+      ****************************************************************  05170000
+      *                                                              *  05180000
+      *     PROCESS PFKEY 7  FOR SCREEN HA003U                       *  05190000
+      *                                                              *  05200000
+      ****************************************************************  05210000
+             IF PFK7                                                    05220000
+                MOVE '003R' TO NEXT-PROGRAM-NAME-ID                     05230000
+                MOVE DO-TRANSFER-LIT TO CONTROL-INDICATOR               05240000
+                GO TO P-100-PFKEYS-RETURN                               05250000
+             END-IF.                                                    05260000
+./ ADD NAME=HAPFK8
+                                                                        05280000
+      ****************************************************************  05290000
+      *                                                              *  05300000
+      *     PROCESS PFKEY 8 FOR SCREEN HA003D                        *  05310000
+      *                                                              *  05320000
+      ****************************************************************  05330000
+             IF PFK8                                                    05340000
+      *         MOVE 'ALREADY ON LAST PAGE OF SCREEN' TO TPO-ERRMSG1    05350000
+                MOVE '003A' TO NEXT-PROGRAM-NAME-ID                     05360000
+                MOVE DO-TRANSFER-LIT TO CONTROL-INDICATOR               05370000
+                GO TO P-100-PFKEYS-RETURN                               05380000
+             END-IF.                                                    05390000
+./ ADD NAME=HASP003D
+      ***************************************************************** 05410000
+      *                COPYCODE TITLE BLOCK                             05420000
+      * MEMBER NAME : HASPHA03                                          05430000
+      * AUTHOR      : PAUL NASH                                         05440000
+      * SYNOPSIS    : SPA COPYBOOK  CONTAINING VARIABLES USE IN PROGRAM 05450000
+      *               HAIM03U                                           05460000
+      *                                                                 05470000
+      * AMENDMENTS  : (07/09/94 - PN) INITIAL RELEASE.                  05480000
+      *             : (27/05/02 - AJK) INCREASE ENGINE MANUFACTURER     05490000
+      *             : (11/04/06 - JA) TD767 ADD LAND ROVER              05500000
+      *             : (29/07/14 - JJ) EU/136/2014 ADD ELECTRIC POWER    05500000
+      ***************************************************************** 05510000
+                                                                        05520000
+                                                                        05530000
+              03 SPA-P-HA03U-AREA REDEFINES SPA-HAPS-PROGRAM-AREA.      05540000
+                  05 SPA-P-PREV-FUEL                 PIC X(15).         05550000
+                  05 SPA-P-PREV-CAPACITY             PIC X(6).          05560000
+                  05 SPA-P-PREV-MAX-NET-POWER        PIC X(15).         05570000
+                  05 SPA-P-PREV-ENGINE-CODE          PIC X(15).         05580000
+                  05 SPA-P-PREV-ENGINE-MANUFACTURER  PIC X(40).         05590000
+                  05 SPA-P-PREV-WORKING-PRINCIPLE    PIC X(25).         05600000
+JA009             05 SPA-P-PREV-ENGINE-CYCLE         PIC X(25).         05610000
+JA009             05 SPA-P-PREV-ENGINE-IGNITION      PIC X(25).         05620000
+                  05 SPA-P-PREV-DIRECT-INJECTION     PIC X(4).          05630000
+                  05 SPA-P-PREV-NO-ARR-CYLINDERS     PIC X(12).         05640000
+                  05 SPA-P-VAR-TIMESTAMP             PIC X(26).         05650000
+JJ011             05 SPA-P-MAX-HOURLY-OP-ELEC        PIC X(8).
+JJ011             05 SPA-P-MXHOUROP-ELEC-TIMESTAMP   PIC X(26).
+JJ011             05 SPA-P-MAX-NET-POWER-ELEC        PIC X(8).
+JJ011             05 SPA-P-MXNP-ELEC-TIMESTAMP       PIC X(26).
+JJ011             05 SPA-P-MAX-30MIN-PWR-ELEC        PIC X(8).
+JJ011             05 SPA-P-MX30MINP-ELEC-TIMESTAMP   PIC X(26).
+MD008             05 SPA-FUEL                        PIC X(15).         05660000
+MD008             05 SPA-CAPACITY                    PIC X(6).          05670000
+MD008             05 SPA-MAX-NET-POWER               PIC X(15).         05680000
+MD008             05 SPA-ENGINE-CODE                 PIC X(15).         05690000
+MD008             05 SPA-ENGINE-MANUFACTURER         PIC X(40).         05700000
+MD008             05 SPA-WORKING-PRINCIPLE           PIC X(25).         05710000
+JA009             05 SPA-ENGINE-CYCLE                PIC X(25).         05720000
+JA009             05 SPA-ENGINE-IGNITION             PIC X(25).         05730000
+MD008             05 SPA-DIRECT-INJECTION            PIC X(4).          05740000
+MD008             05 SPA-NO-ARR-CYLINDERS            PIC X(12).         05750000
+JJ011             05 SPA-MAX-HOURLY-OP-ELEC          PIC X(8).
+JJ011             05 SPA-MAX-NET-POWER-ELEC          PIC X(8).
+JJ011             05 SPA-MAX-30MIN-PWR-ELEC          PIC X(8).
+MD008                                                                   05760000
+JJ011             05 SPA-MXHOURPE-INDICATOR         PIC X.
+JJ011                88 MXHOURPE-FOUND           VALUE 'Y'.
+JJ011                88 MXHOURPE-NOT-FOUND       VALUE  SPACE.
+JJ011             05 SPA-MXNETPE-INDICATOR          PIC X.
+JJ011                88 MXNETPE-FOUND            VALUE 'Y'.
+JJ011                88 MXNETPE-NOT-FOUND        VALUE  SPACE.
+JJ011             05 SPA-MX30MPE-INDICATOR          PIC X.
+JJ011                88 MX30MPE-FOUND            VALUE 'Y'.
+JJ011                88 MX30MPE-NOT-FOUND        VALUE  SPACE.
+./ ADD NAME=HATVARRD
+      *    DEFAULT GENERATED DATA ACCESS
+      *    DEFAULT CALL: ** U-100-READ-HATVAR *****
+           EXEC SQL
+              SELECT   VAR_MODEL,
+                       VAR_TYPE,
+                       VAR_START_DATE,
+                       VAR_END_DATE,
+                       VAR_VARIANT,
+                       VAR_ENGINE,
+                       VAR_AXLES_COC_VAL,
+                       VAR_USERID,
+                       VAR_TIMESTAMP,
+                       VAR_COC_MAX_POWER,
+                       VAR_COC_FUEL,
+                       VAR_COC_CAP,
+                       VAR_COC_NO_ARR_CYL,
+                       VAR_COC_DIRECT_INJ,
+                       VAR_COC_WRK_PRIN,
+                       VAR_COC_ENG_CODE,
+                       VAR_COC_ENG_MAN,
+                       VAR_COC_ANNEX,
+                       VAR_MANF,
+                       VAR_CHIP_DATA,
+                       VAR_GEN_TYR_LIST,
+                       VAR_NEWMOD_ACTMAS_IND
+              INTO    :VAR-MODEL,
+                      :VAR-TYPE,
+                      :VAR-START-DATE,
+                      :VAR-END-DATE,
+                      :VAR-VARIANT,
+                      :VAR-ENGINE,
+                      :VAR-AXLES-COC-VAL,
+                      :VAR-USERID,
+                      :VAR-TIMESTAMP,
+                      :VAR-COC-MAX-POWER,
+                      :VAR-COC-FUEL,
+                      :VAR-COC-CAP,
+                      :VAR-COC-NO-ARR-CYL,
+                      :VAR-COC-DIRECT-INJ,
+                      :VAR-COC-WRK-PRIN,
+                      :VAR-COC-ENG-CODE,
+                      :VAR-COC-ENG-MAN,
+                      :VAR-COC-ANNEX,
+                      :VAR-MANF,
+                      :VAR-CHIP-DATA,
+                      :VAR-GEN-TYR-LIST,
+                      :VAR-NEWMOD-ACTMAS-IND
+              FROM     HAT_VAR_VARIANT
+              WHERE   (VAR_MODEL = :SPA-MODEL
+                 AND   VAR_TYPE = :SPA-TYPE
+                 AND   VAR_START_DATE = :WS-SDATE-DB2
+                 AND   VAR_END_DATE = :WS-EDATE-DB2
+                 AND   VAR_VARIANT = :SPA-VARIANT
+                 AND   VAR_MANF = :SPA-MANF-CODE)
+           END-EXEC.
+./ ADD NAME=HATVARRN
+      *    DEFAULT GENERATED DATA ACCESS
+      *    DEFAULT CALL: ** U-100-READNEXT-HATVAR *
+           EXEC SQL
+              DECLARE  READNEXT_HATVAR CURSOR FOR
+              SELECT   VAR_MODEL,
+                       VAR_TYPE,
+                       VAR_START_DATE,
+                       VAR_END_DATE,
+                       VAR_VARIANT,
+                       VAR_ENGINE,
+                       VAR_AXLES_COC_VAL,
+                       VAR_USERID,
+                       VAR_TIMESTAMP,
+                       VAR_COC_MAX_POWER,
+                       VAR_COC_FUEL,
+                       VAR_COC_CAP,
+                       VAR_COC_NO_ARR_CYL,
+                       VAR_COC_DIRECT_INJ,
+                       VAR_COC_WRK_PRIN,
+                       VAR_COC_ENG_CODE,
+                       VAR_COC_ENG_MAN,
+                       VAR_COC_ANNEX,
+                       VAR_MANF,
+                       VAR_CHIP_DATA,
+                       VAR_GEN_TYR_LIST,
+                       VAR_NEWMOD_ACTMAS_IND
+              FROM     HAT_VAR_VARIANT
+              WHERE   (VAR_MODEL = :SPA-MODEL
+                 AND   VAR_TYPE = :SPA-TYPE
+                 AND   VAR_START_DATE = :WS-SDATE-DB2
+                 AND   VAR_END_DATE = :WS-EDATE-DB2
+                 AND   VAR_TIMESTAMP = :SPA-P-VAR-TIMESTAMP
+                 AND   VAR_VARIANT = :SPA-VARIANT
+                 AND   VAR_MANF = :SPA-MANF-CODE)
+              ORDER BY VAR_MODEL,
+                       VAR_TYPE,
+                       VAR_START_DATE,
+                       VAR_END_DATE,
+                       VAR_TIMESTAMP,
+                       VAR_VARIANT
+           END-EXEC.
+      *
+           IF NOT READNEXT-HATVAR-CURSOR-OPEN
+              PERFORM U-100-READNEXT-HATVAR-OPEN.
+      *
+           EXEC SQL
+              FETCH    READNEXT_HATVAR
+              INTO    :VAR-MODEL,
+                      :VAR-TYPE,
+                      :VAR-START-DATE,
+                      :VAR-END-DATE,
+                      :VAR-VARIANT,
+                      :VAR-ENGINE,
+                      :VAR-AXLES-COC-VAL,
+                      :VAR-USERID,
+                      :VAR-TIMESTAMP,
+                      :VAR-COC-MAX-POWER,
+                      :VAR-COC-FUEL,
+                      :VAR-COC-CAP,
+                      :VAR-COC-NO-ARR-CYL,
+                      :VAR-COC-DIRECT-INJ,
+                      :VAR-COC-WRK-PRIN,
+                      :VAR-COC-ENG-CODE,
+                      :VAR-COC-ENG-MAN,
+                      :VAR-COC-ANNEX,
+                      :VAR-MANF,
+                      :VAR-CHIP-DATA,
+                      :VAR-GEN-TYR-LIST,
+                      :VAR-NEWMOD-ACTMAS-IND
+           END-EXEC.
+      *
+      *    IF SQLCODE = +100
+      *       PERFORM U-100-READNEXT-HATVAR-CLOSE.
+./ ADD NAME=HATVARUP
+      *    DEFAULT GENERATED DATA ACCESS
+      *    DEFAULT CALL: ** U-100-UPDATE-HATVAR ***
+           EXEC SQL
+              UPDATE   HAT_VAR_VARIANT
+              SET
+                       VAR_MODEL=:VAR-MODEL,
+                       VAR_TYPE=:VAR-TYPE,
+                       VAR_START_DATE=:VAR-START-DATE,
+                       VAR_END_DATE=:VAR-END-DATE,
+                       VAR_VARIANT=:VAR-VARIANT,
+                       VAR_ENGINE=:VAR-ENGINE,
+                       VAR_AXLES_COC_VAL=:VAR-AXLES-COC-VAL,
+                       VAR_USERID=:VAR-USERID,
+                       VAR_TIMESTAMP=:VAR-TIMESTAMP,
+                       VAR_COC_MAX_POWER=:VAR-COC-MAX-POWER,
+                       VAR_COC_FUEL=:VAR-COC-FUEL,
+                       VAR_COC_CAP=:VAR-COC-CAP,
+                       VAR_COC_NO_ARR_CYL=:VAR-COC-NO-ARR-CYL,
+                       VAR_COC_DIRECT_INJ=:VAR-COC-DIRECT-INJ,
+                       VAR_COC_WRK_PRIN=:VAR-COC-WRK-PRIN,
+                       VAR_COC_ENG_CODE=:VAR-COC-ENG-CODE,
+                       VAR_COC_ENG_MAN=:VAR-COC-ENG-MAN,
+                       VAR_COC_ANNEX=:VAR-COC-ANNEX,
+                       VAR_MANF=:VAR-MANF,
+                       VAR_CHIP_DATA=:VAR-CHIP-DATA,
+                       VAR_GEN_TYR_LIST=:VAR-GEN-TYR-LIST,
+                       VAR_NEWMOD_ACTMAS_IND=:VAR-NEWMOD-ACTMAS-IND
+      *    CPYKEY  FOR UPDATE TO HATVAR
+      *    CPYCALL FOR UPDATE TO HATVAR
+      *    DEFAULT GENERATED DATA ACCESS
+      *    DEFAULT CALL: ** U-100-UPDATE-HATVAR ***
+              WHERE   (VAR_MODEL = :SPA-MODEL
+                 AND   VAR_MANF = :SPA-MANF-CODE
+                 AND   VAR_TYPE = :SPA-TYPE
+                 AND   VAR_START_DATE = :WS-SDATE-DB2
+                 AND   VAR_END_DATE = :WS-EDATE-DB2
+                 AND   VAR_VARIANT  = :SPA-VARIANT )
+           END-EXEC.
+./ ADD NAME=HAZ300I
+      *    CONVERT DATE YYYY-MM-DD TO DD/MM/YYYY                        06010000
+                                                                        06020000
+      ****************************************************************  06030000
+      *                                                              *  06040000
+      * CONVERT DATE FROM YYYY-MM-DD TO DD/MM/YYYY                   *  06050000
+      *                                                              *  06060000
+      ****************************************************************  06070000
+       Z300I-CONVERT-DATE SECTION.                                      06080000
+                                                                        06090000
+                                                                        06100000
+             MOVE WS-DATE-IN-YYYY TO WS-DATE-CON-YYYY                   06110000
+             MOVE WS-DATE-IN-MM   TO WS-DATE-CON-MM                     06120000
+             MOVE WS-DATE-IN-DD   TO WS-DATE-CON-DD                     06130000
+             .                                                          06140000
+       Z300I-EXIT.                                                      06150000
+             EXIT.                                                      06160000
+                                                                        06170000
+./ ADD NAME=HAZ300T
+JJ011 *    UPDATE VAC FIELD                                             12700000
+JJ011                                                                   12710000
+JJ011 ****************************************************************  12720000
+JJ011 *                                                              *  12730000
+JJ011 *  CHECK EACH FIELD TO SEE IF IT HAS CHANGED. IF IT HAS CHANGED*  12740000
+JJ011 *  CALL HA700T-UPDATE-VAC-TABLE SECTION ON RETURN FROM HA700T  *  12750000
+JJ011 *  CHECK TO SEE IF AN ERROR HAS OCCURED.                       *  12760000
+JJ011 *                                                              *  12770000
+JJ011 ****************************************************************  13010000
+JJ011                                                                   13020000
+JJ011  HA300T-UPDATE-VAC-FIELDS SECTION.                                13030000
+JJ011                                                                   13040000
+JJ011                                                                   15650000
+JJ011        IF SPA-MAX-HOURLY-OP-ELEC NOT =                            15670000
+JJ011              SPA-P-MAX-HOURLY-OP-ELEC
+JJ011           MOVE '22   '      TO   WS-FIELD-NO                      15680000
+JJ011           MOVE '4  '        TO   WS-SUB-FIELD                     15690000
+JJ011           MOVE SPA-MAX-HOURLY-OP-ELEC        TO WS-VAC-VALUE      15700000
+JJ011           MOVE SPA-P-MXHOUROP-ELEC-TIMESTAMP TO WS-TIMESTAMP      15710000
+                IF MXHOURPE-NOT-FOUND
+                   PERFORM HA800T-CREATE-VAC-TABLE
+                ELSE
+JJ011              PERFORM HA700T-UPDATE-VAC-TABLE                      15720000
+                END-IF
+JJ011           IF WS-ERROR                                             15730000
+JJ011              MOVE ERROR-ATTR TO TPO-HOUROP-ATTR                   15740000
+JJ011           ELSE                                                    15750000
+JJ011              MOVE SPA-MAX-HOURLY-OP-ELEC                          15760000
+JJ011                 TO   SPA-P-MAX-HOURLY-OP-ELEC                     15760000
+JJ011              MOVE VAC-TIMESTAMP TO SPA-P-MXHOUROP-ELEC-TIMESTAMP  15770000
+                   SET MXHOURPE-FOUND TO TRUE
+JJ011           END-IF                                                  16010000
+JJ011        END-IF.                                                    16020000
+JJ011                                                                   15650000
+JJ011        IF SPA-MAX-NET-POWER-ELEC NOT =                            15670000
+JJ011              SPA-P-MAX-NET-POWER-ELEC
+JJ011           MOVE '22   '      TO   WS-FIELD-NO                      15680000
+JJ011           MOVE '5  '        TO   WS-SUB-FIELD                     15690000
+JJ011           MOVE SPA-MAX-NET-POWER-ELEC        TO WS-VAC-VALUE      15700000
+JJ011           MOVE SPA-P-MXNP-ELEC-TIMESTAMP     TO WS-TIMESTAMP      15710000
+                IF MXNETPE-NOT-FOUND
+                   PERFORM HA800T-CREATE-VAC-TABLE
+                ELSE
+                   PERFORM HA700T-UPDATE-VAC-TABLE
+                END-IF
+JJ011           IF WS-ERROR                                             15730000
+JJ011              MOVE ERROR-ATTR TO TPO-HOUROP-ATTR                   15740000
+JJ011           ELSE                                                    15750000
+JJ011              MOVE SPA-MAX-NET-POWER-ELEC                          15760000
+JJ011                 TO   SPA-P-MAX-NET-POWER-ELEC                     15760000
+JJ011              MOVE VAC-TIMESTAMP TO SPA-P-MXNP-ELEC-TIMESTAMP      15770000
+                   SET MXNETPE-FOUND TO TRUE
+JJ011           END-IF                                                  16010000
+JJ011        END-IF.                                                    16020000
+JJ011                                                                   15650000
+JJ011        IF SPA-MAX-30MIN-PWR-ELEC NOT =                            15670000
+JJ011              SPA-P-MAX-30MIN-PWR-ELEC
+JJ011           MOVE '22   '      TO   WS-FIELD-NO                      15680000
+JJ011           MOVE '6  '        TO   WS-SUB-FIELD                     15690000
+JJ011           MOVE SPA-MAX-30MIN-PWR-ELEC        TO WS-VAC-VALUE      15700000
+JJ011           MOVE SPA-P-MX30MINP-ELEC-TIMESTAMP TO WS-TIMESTAMP      15710000
+                IF MX30MPE-NOT-FOUND
+                   PERFORM HA800T-CREATE-VAC-TABLE
+                ELSE
+                   PERFORM HA700T-UPDATE-VAC-TABLE
+                END-IF
+JJ011           IF WS-ERROR                                             15730000
+JJ011              MOVE ERROR-ATTR TO TPO-HOUROP-ATTR                   15740000
+JJ011           ELSE                                                    15750000
+JJ011              MOVE SPA-MAX-30MIN-PWR-ELEC                          15760000
+JJ011                 TO   SPA-P-MAX-30MIN-PWR-ELEC                     15760000
+JJ011              MOVE VAC-TIMESTAMP TO SPA-P-MX30MINP-ELEC-TIMESTAMP  15770000
+                   SET MX30MPE-FOUND  TO TRUE
+JJ011           END-IF                                                  16010000
+JJ011        END-IF.                                                    16020000
+JJ011                                                                   15650000
+JJ011  HA300T-EXIT.                                                     16300000
+JJ011        EXIT.                                                      16310000
+JJ011                                                                   16320000
+./ ADD NAME=HAZ600T
+      *    AUDIT TRAIL CALL                                             06190000
+                                                                        06200000
+      ****************************************************************  06210000
+      *                                                              *  06220000
+      *   CALL TO AUDIT TRAIL                                        *  06230000
+      *                                                              *  06240000
+      ****************************************************************  06250000
+                                                                        06260000
+       HA600T-AUDIT-TRAIL SECTION.                                      06270000
+                                                                        06280000
+                                                                        06290000
+             CALL 'HAIMALOG' USING  WS-TABLE-NAME                       06300000
+                                    WS-B4-IMAGE                         06310000
+                                    WS-AFT-IMAGE                        06320000
+                                    WS-LENGTH-B4IMAGE                   06330000
+                                    WS-LENGTH-AFTIMAGE                  06340000
+                                    WS-DB2-STATUS.                      06350000
+                                                                        06360000
+             IF WS-DB2-STATUS NOT = 0                                   06370000
+                                                                        06380000
+                MOVE WS-DB2-STATUS  TO ABT-DB2-STATUS                   06390000
+                MOVE 'INSERT'       TO ABT-DA-FUNCTION                  06400000
+                MOVE 'DB2'          TO ABT-ERROR-ACTIVITY               06410000
+                MOVE 'HAIMALOG'     TO ABT-DA-ACCESS-NAME               06420000
+                CALL 'ADMAAB0'                                          06430000
+                PERFORM Z-980-ABNORMAL-TERM                             06440000
+                                                                        06450000
+             END-IF.                                                    06460000
+                                                                        06470000
+       HA600T-AUDIT-TRAIL-EXIT.                                         06480000
+             EXIT.                                                      06490000
+                                                                        06500000
+./ ADD NAME=HAZ700T
+JJ011 *    CHECK AND UPDATE VAC TABLE VALUES                            16670000
+JJ011                                                                   16680000
+JJ011 ***************************************************************** 16690000
+JJ011 *                                                               * 16700000
+JJ011 * COMMON ROUTINE TO CHECK THE VAC FIELD HAS NOT BEEN UPDATED    * 16710000
+JJ011 * SINCE THE SCREEN WAS DISPLAYED AND THEN UPDATE THE FIELD VALUE* 16720000
+JJ011 ***************************************************************** 16730000
+JJ011                                                                   16740000
+JJ011  HA700T-UPDATE-VAC-TABLE  SECTION.                                16750000
+JJ011                                                                   16760000
+JJ011                                                                   16770000
+JJ011           MOVE SPACES TO WS-ERROR-INDICATOR                       17010000
+JJ011                                                                   17020000
+JJ011           PERFORM U-100-READNXT2-HATVAC                           17030000
+JJ011                                                                   17040000
+JJ011           IF DA-NOTFOUND                                          17050000
+JJ011                                                                   17060000
+JJ011               MOVE WS-E050-ERROR-MSG TO TPO-ERRMSG1               17070000
+JJ011               SET WS-ERROR    TO TRUE                             17080000
+JJ011               SET DO-WRITE    TO TRUE                             17090000
+JJ011                                                                   17100000
+JJ011           ELSE                                                    17110000
+JJ011                                                                   17120000
+JJ011               MOVE HATVAC TO WS-B4-IMAGE                          17130000
+JJ011               MOVE WS-VAC-VALUE  TO VAC-VALUE                     17140000
+JJ011               MOVE SPA-USER-ID TO VAC-USERID                      17150000
+JJ011                                                                   17160000
+JJ011               COPY HATIMEST.                                      17170000
+JJ011               MOVE WS-TIME-STAMP TO VAC-TIMESTAMP                 17180000
+JJ011               MOVE HATVAC TO WS-AFT-IMAGE                         17190000
+JJ011                                                                   17200000
+JJ011               PERFORM U-100-UPDATE-HATVAC                         17210000
+JJ011                                                                   17220000
+JJ011               SET SPA-UPDATE-SUCCESSFUL TO TRUE                   17230000
+JJ011                                                                   17240000
+JJ011               MOVE LENGTH OF HATVAC TO WS-LENGTH-B4IMAGE          17250000
+JJ011                                        WS-LENGTH-AFTIMAGE         17260000
+JJ011               MOVE 'HATVAC' TO WS-TABLE-NAME                      17270000
+JJ011                                                                   17280000
+JJ011               PERFORM HA600T-AUDIT-TRAIL                          17290000
+JJ011           END-IF                                                  17300000
+JJ011                                                                   17310000
+JJ011           PERFORM U-100-READNXT2-HATVAC-CLOSE.                    17320000
+JJ011                                                                   17330000
+JJ011  HA700T-EXIT.                                                     17340000
+JJ011        EXIT.                                                      17350000
+JJ011                                                                   17360000
+./ ADD NAME=HAZ800T
+      *    CREATE VAC ROWS                                              21130000
+      *    INSERT HATVAC  ROW                                           21140000
+      ****************************************************************  21150000
+      *  CREATE ROW ON HATVAC AFTER CHECKING THAT THE ROW DOES NOT   *  21160000
+      *  ALREADY EXIST                                               *  21170000
+      ****************************************************************  21180000
+                                                                        21190000
+       HA800T-CREATE-VAC-TABLE SECTION.                                 21200000
+                                                                        21210000
+                MOVE SPA-MANF-CODE            TO VAC-MANF               90000
+                MOVE SPA-MODEL                TO VAC-MODEL              00000
+                MOVE SPA-TYPE                 TO VAC-TYPE               10000
+                MOVE SPA-VARIANT              TO VAC-VARIANT            20000
+                MOVE SPA-SDATE                TO VAC-START-DATE         50000
+                MOVE SPA-EDATE                TO VAC-END-DATE           60000
+                MOVE WS-FIELD-NO              TO VAC-FIELD-NO           70000
+                MOVE WS-SUB-FIELD             TO VAC-SUB-FIELD          80000
+                MOVE WS-VAC-VALUE             TO VAC-VALUE              00000
+                MOVE SPA-USER-ID              TO VAC-USERID             10000
+                COPY HATIMEST.                                          20000
+                MOVE WS-TIME-STAMP            TO VAC-TIMESTAMP          30000
+                                                                        40000
+                PERFORM U-100-CREATE-HATVAC                             50000
+                                                                        60000
+                SET SPA-UPDATE-SUCCESSFUL TO TRUE                       70000
+                MOVE SPACES TO WS-B4-IMAGE                              80000
+                MOVE HATVAC TO WS-AFT-IMAGE                             90000
+                MOVE LENGTH OF HATVAC TO WS-LENGTH-B4IMAGE              00000
+                                         WS-LENGTH-AFTIMAGE             10000
+                MOVE 'HATVAC' TO WS-TABLE-NAME                          20000
+                                                                        30000
+                PERFORM HA600T-AUDIT-TRAIL.                             40000
+                                                                        21550000
+       HA800T-EXIT.                                                     21590000
+             EXIT.                                                      21600000
+                                                                        21610000
+./ ADD NAME=ININIT1
+                                                                        06520000
+      ****************************************************************  06530000
+      *                                                              *  06540000
+      *  INITIALIZE DATE WORKING STORAGE FIELDS                      *  06550000
+      *                                                              *  06560000
+      ****************************************************************  06570000
+                                                                        06580000
+            MOVE SPA-SDATE TO WS-SDATE-DB2                              06590000
+            MOVE SPA-EDATE TO WS-EDATE-DB2                              06600000
+MD08                                                                    06610000
+MD08        MOVE SPA-SDATE-YEAR   TO WS-SDATE1-YEAR                     06620000
+MD08        MOVE SPA-SDATE-MM     TO WS-SDATE1-MM                       06630000
+MD08        MOVE SPA-SDATE-DD     TO WS-SDATE1-DD                       06640000
+MD08                                                                    06650000
+            MOVE SPACES TO SPA-UPDATE-MARKER.                           06660000
+JA009       IF SPA-MANF-CODE = 'L'                                      06670000
+JA009          MOVE 'Engine / Cycle'   TO WS-ENGINE-CYCLE-LIT           06680000
+JA009          MOVE 'Eng. Ign. Principle' TO WS-ENGINE-IGNITION-LIT     06690000
+JA009       END-IF                                                      06700000
+JA009       .                                                           06710000
+./ ADD NAME=INTERM
+                                                                        06730000
+      ****************************************************************  06740000
+      *                                                              *  06750000
+      *  UPDATE TABLE IF ANY FIELDS HAVE BEEN UPDATED                *  06760000
+      *                                                              *  06770000
+      ****************************************************************  07010000
+                                                                        07020000
+JA009        IF SPA-MANF-CODE = 'L'                                     07030000
+JA009          AND (TPO-ENGCYC NOT = SPACES                             07040000
+JA009          AND  TPO-ENGIGN NOT = SPACES)                            07050000
+JA009           MOVE SPACES TO WS-WORKING-PRINCIPLE-CONCAT              07060000
+JA009           MOVE WS-ENGCYC-MAX    TO WS-COUNT                       07070000
+JA009           MOVE SPA-ENGINE-CYCLE(1:WS-ENGCYC-MAX) TO               07080000
+JA009                WS-WORKING-PRINCIPLE-CONCAT(1:WS-ENGCYC-MAX)       07090000
+JA009           ADD 1 TO WS-COUNT                                       07100000
+JA099           MOVE ','              TO                                07110000
+JA009                WS-WORKING-PRINCIPLE-CONCAT(WS-COUNT:1)            07120000
+JA009           ADD 1 TO WS-COUNT                                       07130000
+JA009           MOVE SPA-ENGINE-IGNITION (1:WS-ENGIGN-MAX) TO           07140000
+JA009            WS-WORKING-PRINCIPLE-CONCAT(WS-COUNT:WS-ENGIGN-MAX)    07150000
+JA009        END-IF                                                     07160000
+                                                                        07170000
+PN010        IF SPA-SDATE > '2007-08-01'                                07180000
+PN010           IF SPA-MANF-CODE = 'J'                                  07190000
+PN010             AND (TPO-ENGCYC NOT = SPACES                          07200000
+PN010             AND  TPO-ENGIGN NOT = SPACES)                         07210000
+PN010              MOVE SPACES TO WS-WORKING-PRINCIPLE-CONCAT           07220000
+PN010              MOVE WS-ENGCYC-MAX    TO WS-COUNT                    07230000
+PN010              MOVE SPA-ENGINE-CYCLE(1:WS-ENGCYC-MAX) TO            07240000
+PN010                   WS-WORKING-PRINCIPLE-CONCAT(1:WS-ENGCYC-MAX)    07250000
+PN010              ADD 1 TO WS-COUNT                                    07260000
+PN010              MOVE ','              TO                             07270000
+PN010                   WS-WORKING-PRINCIPLE-CONCAT(WS-COUNT:1)         07280000
+PN010              ADD 1 TO WS-COUNT                                    07290000
+PN010              MOVE SPA-ENGINE-IGNITION (1:WS-ENGIGN-MAX) TO        07300000
+PN010               WS-WORKING-PRINCIPLE-CONCAT(WS-COUNT:WS-ENGIGN-MAX) 07310000
+PN010           END-IF                                                  07320000
+PN010        END-IF                                                     07330000
+                                                                        07340000
+JA009        IF SPA-MANF-CODE = 'F'                                     07350000
+PN010        OR (SPA-MANF-CODE = 'J' AND SPA-SDATE < '2007-07-31')      07360000
+MD008           IF (SPA-FUEL                NOT = SPA-P-PREV-FUEL)      07370000
+MD008           OR (SPA-CAPACITY            NOT = SPA-P-PREV-CAPACITY)  07380000
+MD008           OR (SPA-MAX-NET-POWER       NOT =                       07390000
+MD008                                       SPA-P-PREV-MAX-NET-POWER)   07400000
+MD008           OR (SPA-ENGINE-CODE         NOT =                       07410000
+MD008                                       SPA-P-PREV-ENGINE-CODE)     07420000
+MD008           OR (SPA-DIRECT-INJECTION    NOT =                       07430000
+MD008                                    SPA-P-PREV-DIRECT-INJECTION)   07440000
+MD008           OR (SPA-NO-ARR-CYLINDERS    NOT =                       07450000
+MD008                                    SPA-P-PREV-NO-ARR-CYLINDERS)   07460000
+MD008           OR (SPA-ENGINE-MANUFACTURER NOT =                       07470000
+                                         SPA-P-PREV-ENGINE-MANUFACTURER)07480000
+MD008           OR (SPA-WORKING-PRINCIPLE   NOT =                       07490000
+                                         SPA-P-PREV-WORKING-PRINCIPLE)  07500000
+                                                                        07510000
+                   PERFORM U-100-READNEXT-HATVAR                        07520000
+                                                                        07530000
+                   IF DA-NOTFOUND                                       07540000
+                                                                        07550000
+                      MOVE WS-E050-ERROR-MSG TO TPO-ERRMSG1             07560000
+MD008                 IF SPA-FUEL NOT =  SPA-P-PREV-FUEL                07570000
+                         MOVE ERROR-ATTR TO TPO-FUEL-ATTR               07580000
+                      END-IF                                            07590000
+MD008                 IF SPA-CAPACITY  NOT =  SPA-P-PREV-CAPACITY       07600000
+                         MOVE ERROR-ATTR TO TPO-CAPACITY-ATTR           07610000
+                      END-IF                                            07620000
+MD008                 IF SPA-MAX-NET-POWER NOT =                        07630000
+MD008                                    SPA-P-PREV-MAX-NET-POWER       07640000
+                         MOVE ERROR-ATTR TO TPO-POWER-ATTR              07650000
+                      END-IF                                            07660000
+MD008                 IF SPA-ENGINE-CODE NOT =  SPA-P-PREV-ENGINE-CODE  07670000
+                         MOVE ERROR-ATTR TO TPO-ENCODE-ATTR             07680000
+                      END-IF                                            07690000
+MD008                 IF SPA-DIRECT-INJECTION NOT =                     07700000
+                                           SPA-P-PREV-DIRECT-INJECTION  07710000
+                         MOVE ERROR-ATTR TO TPO-DIRINJEC-ATTR           07720000
+                      END-IF                                            07730000
+MD008                 IF SPA-NO-ARR-CYLINDERS NOT =                     07740000
+                                            SPA-P-PREV-NO-ARR-CYLINDERS 07750000
+                         MOVE ERROR-ATTR TO TPO-NOARRCYL-ATTR           07760000
+                      END-IF                                            07770000
+MD008                 IF SPA-ENGINE-MANUFACTURER NOT =                  08010000
+                                         SPA-P-PREV-ENGINE-MANUFACTURER 08020000
+                         MOVE ERROR-ATTR TO TPO-ENMANU-ATTR             08030000
+                      END-IF                                            08040000
+MD008                 IF SPA-WORKING-PRINCIPLE NOT =                    08050000
+                                         SPA-P-PREV-WORKING-PRINCIPLE   08060000
+                         MOVE ERROR-ATTR TO TPO-WORKPRIN-ATTR           08070000
+                      END-IF                                            08080000
+                                                                        08090000
+                      SET DO-WRITE TO TRUE                              08100000
+                                                                        08110000
+                   ELSE                                                 08120000
+                                                                        08130000
+                      MOVE HATVAR TO WS-B4-IMAGE                        08140000
+MD008                 MOVE SPA-ENGINE-CODE         TO VAR-COC-ENG-CODE  08150000
+MD008                 MOVE SPA-ENGINE-MANUFACTURER TO VAR-COC-ENG-MAN   08160000
+MD008                 MOVE SPA-WORKING-PRINCIPLE   TO VAR-COC-WRK-PRIN  08170000
+MD008                 MOVE SPA-DIRECT-INJECTION    TO VAR-COC-DIRECT-INJ08180000
+MD008                 MOVE SPA-NO-ARR-CYLINDERS    TO VAR-COC-NO-ARR-CYL08190000
+MD008                 MOVE SPA-CAPACITY            TO VAR-COC-CAP       08200000
+MD008                 MOVE SPA-FUEL                TO VAR-COC-FUEL      08210000
+MD008                 MOVE SPA-MAX-NET-POWER       TO VAR-COC-MAX-POWER 08220000
+                      MOVE SPA-USER-ID TO VAR-USERID                    08230000
+                                                                        08240000
+                      COPY HATIMEST.                                    08250000
+                                                                        08260000
+                      MOVE WS-TIME-STAMP TO VAR-TIMESTAMP               08270000
+                      MOVE HATVAR TO WS-AFT-IMAGE                       08280000
+                                                                        08290000
+                      PERFORM U-100-UPDATE-HATVAR                       08300000
+                                                                        08310000
+                      SET SPA-UPDATE-SUCCESSFUL TO TRUE                 08320000
+                                                                        08330000
+                      MOVE LENGTH OF HATVAR TO WS-LENGTH-B4IMAGE        08340000
+                                               WS-LENGTH-AFTIMAGE       08350000
+                      MOVE 'HATVAR' TO WS-TABLE-NAME                    08360000
+                                                                        08370000
+                      PERFORM HA600T-AUDIT-TRAIL                        08380000
+                   END-IF                                               08390000
+                END-IF                                                  08400000
+JA009                                                                   08410000
+JA009        END-IF                                                     08420000
+JA009                                                                   08430000
+JA009        IF SPA-MANF-CODE = 'L'                                     08440000
+PN010        OR (SPA-MANF-CODE = 'J' AND SPA-SDATE > '2007-08-01')      08450000
+JA009           IF (SPA-FUEL             NOT = SPA-P-PREV-FUEL)         08460000
+JA009           OR (SPA-CAPACITY         NOT = SPA-P-PREV-CAPACITY)     08470000
+JA009           OR (SPA-MAX-NET-POWER    NOT = SPA-P-PREV-MAX-NET-POWER)08480000
+JA009           OR (SPA-ENGINE-CODE      NOT = SPA-P-PREV-ENGINE-CODE)  08490000
+JA009           OR (SPA-DIRECT-INJECTION NOT =                          08500000
+JA009                                    SPA-P-PREV-DIRECT-INJECTION)   08510000
+JA009           OR (SPA-NO-ARR-CYLINDERS NOT =                          08520000
+JA009                                    SPA-P-PREV-NO-ARR-CYLINDERS)   08530000
+JA009           OR (SPA-ENGINE-MANUFACTURER NOT =                       08540000
+JA009                                    SPA-P-PREV-ENGINE-MANUFACTURER)08550000
+JA009           OR (SPA-ENGINE-CYCLE     NOT = SPA-P-PREV-ENGINE-CYCLE) 08560000
+JA009           OR (SPA-ENGINE-IGNITION  NOT =                          08570000
+JA009                                    SPA-P-PREV-ENGINE-IGNITION)    08580000
+JA009                                                                   08590000
+JA009              PERFORM U-100-READNEXT-HATVAR                        08600000
+JA009                                                                   08610000
+JA009              IF DA-NOTFOUND                                       08620000
+JA009                                                                   08630000
+JA009                 MOVE WS-E050-ERROR-MSG TO TPO-ERRMSG1             08640000
+JA009                 IF SPA-FUEL          NOT =  SPA-P-PREV-FUEL       08650000
+JA009                    MOVE ERROR-ATTR TO TPO-FUEL-ATTR               08660000
+JA009                 END-IF                                            08670000
+JA009                 IF SPA-CAPACITY      NOT =  SPA-P-PREV-CAPACITY   08680000
+JA009                    MOVE ERROR-ATTR TO TPO-CAPACITY-ATTR           08690000
+JA009                 END-IF                                            08700000
+JA009                 IF SPA-MAX-NET-POWER NOT =                        08710000
+JA009                                      SPA-P-PREV-MAX-NET-POWER     08720000
+JA009                    MOVE ERROR-ATTR TO TPO-POWER-ATTR              08730000
+JA009                 END-IF                                            08740000
+JA009                 IF SPA-ENGINE-CODE   NOT =                        08750000
+JA009                                      SPA-P-PREV-ENGINE-CODE       08760000
+JA009                    MOVE ERROR-ATTR TO TPO-ENCODE-ATTR             08770000
+JA009                 END-IF                                            09010000
+JA009                 IF SPA-DIRECT-INJECTION NOT =                     09020000
+JA009                                        SPA-P-PREV-DIRECT-INJECTION09030000
+JA009                    MOVE ERROR-ATTR TO TPO-DIRINJEC-ATTR           09040000
+JA009                 END-IF                                            09050000
+JA009                 IF SPA-NO-ARR-CYLINDERS NOT =                     09060000
+JA009                                       SPA-P-PREV-NO-ARR-CYLINDERS 09070000
+JA009                    MOVE ERROR-ATTR TO TPO-NOARRCYL-ATTR           09080000
+JA009                 END-IF                                            09090000
+JA009                 IF SPA-ENGINE-MANUFACTURER NOT =                  09100000
+JA009                                    SPA-P-PREV-ENGINE-MANUFACTURER 09110000
+JA009                    MOVE ERROR-ATTR TO TPO-ENMANU-ATTR             09120000
+JA009                 END-IF                                            09130000
+JA009                 IF SPA-ENGINE-CYCLE      NOT =                    09140000
+JA009                                    SPA-P-PREV-ENGINE-CYCLE        09150000
+JA009                    MOVE ERROR-ATTR TO TPO-ENGCYC-ATTR             09160000
+JA009                 END-IF                                            09170000
+JA009                 IF SPA-ENGINE-IGNITION   NOT =                    09180000
+JA009                                    SPA-P-PREV-ENGINE-IGNITION     09190000
+JA009                    MOVE ERROR-ATTR TO TPO-ENGIGN-ATTR             09200000
+JA009                 END-IF                                            09210000
+JA009                                                                   09220000
+JA009                 SET DO-WRITE TO TRUE                              09230000
+JA009                                                                   09240000
+JA009              ELSE                                                 09250000
+JA009                                                                   09260000
+JA009                 MOVE HATVAR TO WS-B4-IMAGE                        09270000
+JA009                 MOVE SPA-ENGINE-CODE         TO VAR-COC-ENG-CODE  09280000
+JA009                 MOVE SPA-ENGINE-MANUFACTURER TO VAR-COC-ENG-MAN   09290000
+JA009                 MOVE WS-WORKING-PRINCIPLE-CONCAT                  09300000
+JA009                                            TO VAR-COC-WRK-PRIN    09310000
+JA009                 MOVE SPA-DIRECT-INJECTION    TO VAR-COC-DIRECT-INJ09320000
+JA009                 MOVE SPA-NO-ARR-CYLINDERS    TO VAR-COC-NO-ARR-CYL09330000
+JA009                 MOVE SPA-CAPACITY            TO VAR-COC-CAP       09340000
+JA009                 MOVE SPA-FUEL                TO VAR-COC-FUEL      09350000
+JA009                 MOVE SPA-MAX-NET-POWER       TO VAR-COC-MAX-POWER 09360000
+JA009                 MOVE SPA-USER-ID TO VAR-USERID                    09370000
+JA009                                                                   09380000
+JA009                 COPY HATIMEST.                                    09390000
+JA009                                                                   09400000
+JA009                 MOVE WS-TIME-STAMP TO VAR-TIMESTAMP               09410000
+JA009                 MOVE HATVAR TO WS-AFT-IMAGE                       09420000
+JA009                                                                   09430000
+JA009                 PERFORM U-100-UPDATE-HATVAR                       09440000
+JA009                                                                   09450000
+JA009                 SET SPA-UPDATE-SUCCESSFUL TO TRUE                 09460000
+JA009                                                                   09470000
+JA009                 MOVE LENGTH OF HATVAR TO WS-LENGTH-B4IMAGE        09480000
+JA009                                          WS-LENGTH-AFTIMAGE       09490000
+JA009                 MOVE 'HATVAR' TO WS-TABLE-NAME                    09500000
+JA009                                                                   09510000
+JA009                 PERFORM HA600T-AUDIT-TRAIL                        09520000
+JA009              END-IF                                               09530000
+JA009           END-IF                                                  09540000
+JA009        END-IF.                                                    09550000
+                                                                        09560000
+JJ011        PERFORM HA300T-UPDATE-VAC-FIELDS.                          09570000
+                                                                        09580000
+./ ADD NAME=OINIT1
+    * *  POPULATE SCREEN FIELDS                                         09600000
+                                                                        09610000
+      ****************************************************************  09620000
+      *                                                              *  09630000
+      * INTIALIZE VARAIABLES                                         *  09640000
+      *                                                              *  09650000
+      ****************************************************************  09660000
+                                                                        09670000
+           INITIALIZE SPA-P-HA03U-AREA                                  09680000
+      ***  INITIALIZE WS-FIELD-DEFINITION                               09690000
+           MOVE '/' TO WS-FILLER-3                                      09700000
+           MOVE '/' TO WS-FILLER-4                                      09710000
+                                                                        09720000
+      ****************************************************************  09730000
+      *                                                              *  09740000
+      *  IF PREVIOUS SCREEN UPDATE OK DISPLAY I001 MESSAGE           *  09750000
+      *                                                              *  09760000
+      ****************************************************************  09770000
+                                                                        10010000
+                                                                        10020000
+           IF SPA-UPDATE-SUCCESSFUL                                     10030000
+               MOVE WS-I001-ERROR-MSG TO TPO-ERRMSG1                    10040000
+               MOVE SPACES TO SPA-UPDATE-MARKER                         10050000
+           END-IF                                                       10060000
+                                                                        10070000
+      ****************************************************************  10080000
+      *                                                              *  10090000
+      *    POPULATE SCREEN VARIABLES                                 *  10100000
+      *                                                              *  10110000
+      ****************************************************************  10120000
+           MOVE SPA-SDATE TO WS-SDATE-DB2                               10130000
+           MOVE SPA-EDATE TO WS-EDATE-DB2                               10140000
+                                                                        10150000
+JA009      IF SPA-SDATE > '2007-08-01'                                  10160000
+JA009         IF SPA-MANF-CODE = 'J'                                    10170000
+JA009            MOVE 'Engine / Cycle'   TO WS-ENGINE-CYCLE-LIT         10180000
+JA009            MOVE 'Eng. Ign. Principle' TO WS-ENGINE-IGNITION-LIT   10190000
+JA009         END-IF                                                    10200000
+JA009      END-IF                                                       10210000
+JA009      IF SPA-MANF-CODE = 'L'                                       10220000
+JA009         MOVE 'Engine / Cycle'   TO WS-ENGINE-CYCLE-LIT            10230000
+JA009         MOVE 'Eng. Ign. Principle' TO WS-ENGINE-IGNITION-LIT      10240000
+JA009      END-IF                                                       10250000
+                                                                        10260000
+      ****************************************************************  10270000
+      *                                                              *  10280000
+      * READ TABLE  TO OBTAIN SCREEN DETAILS                         *  10290000
+      *                                                              *  10300000
+      ****************************************************************  10310000
+                                                                        10320000
+                                                                        10330000
+           PERFORM U-100-READ-HATVAR                                    10340000
+                                                                        10350000
+MD008      MOVE  VAR-COC-ENG-CODE   TO SPA-ENGINE-CODE                  10360000
+                                       SPA-P-PREV-ENGINE-CODE           10370000
+MD008      MOVE  VAR-COC-ENG-MAN    TO SPA-ENGINE-MANUFACTURER          10380000
+                                       SPA-P-PREV-ENGINE-MANUFACTURER   10390000
+JA009      IF SPA-MANF-CODE = 'F'                                       10400000
+MD008         MOVE  VAR-COC-WRK-PRIN   TO SPA-WORKING-PRINCIPLE         10410000
+                                          SPA-P-PREV-WORKING-PRINCIPLE  10420000
+JA009      END-IF                                                       10430000
+JA009      IF SPA-MANF-CODE = 'L'                                       10440000
+JA009         UNSTRING VAR-COC-WRK-PRIN                                 10450000
+JA009         DELIMITED BY ','                                          10460000
+JA009         INTO                     SPA-ENGINE-CYCLE                 10470000
+JA009                                  SPA-ENGINE-IGNITION              10480000
+JA009         MOVE SPA-ENGINE-CYCLE TO    SPA-P-PREV-ENGINE-CYCLE       10490000
+JA009         MOVE SPA-ENGINE-IGNITION TO SPA-P-PREV-ENGINE-IGNITION    10500000
+JA009      END-IF                                                       10510000
+JA009      IF SPA-MANF-CODE = 'J'                                       10520000
+              IF SPA-SDATE > '2007-08-01'                               10530000
+JA009           UNSTRING VAR-COC-WRK-PRIN                               10540000
+JA009           DELIMITED BY ','                                        10550000
+JA009           INTO                     SPA-ENGINE-CYCLE               10560000
+JA009                                  SPA-ENGINE-IGNITION              10570000
+JA009           MOVE SPA-ENGINE-CYCLE TO    SPA-P-PREV-ENGINE-CYCLE     10580000
+JA009           MOVE SPA-ENGINE-IGNITION TO SPA-P-PREV-ENGINE-IGNITION  10590000
+              ELSE                                                      10600000
+MD008           MOVE  VAR-COC-WRK-PRIN   TO SPA-WORKING-PRINCIPLE       10610000
+                                          SPA-P-PREV-WORKING-PRINCIPLE  10620000
+JA009         END-IF                                                    10630000
+JA009      END-IF                                                       10640000
+MD008      MOVE  VAR-COC-DIRECT-INJ TO SPA-DIRECT-INJECTION             10650000
+                                       SPA-P-PREV-DIRECT-INJECTION      10660000
+MD008      MOVE  VAR-COC-NO-ARR-CYL TO SPA-NO-ARR-CYLINDERS             10670000
+                                       SPA-P-PREV-NO-ARR-CYLINDERS      10680000
+MD008      MOVE  VAR-COC-CAP        TO SPA-CAPACITY                     10690000
+                                       SPA-P-PREV-CAPACITY              10700000
+MD008      MOVE  VAR-COC-FUEL       TO SPA-FUEL                         10710000
+                                       SPA-P-PREV-FUEL                  10720000
+MD008      MOVE  VAR-COC-MAX-POWER  TO SPA-MAX-NET-POWER                10730000
+                                       SPA-P-PREV-MAX-NET-POWER         10740000
+                                                                        10750000
+JJ011      MOVE  VAR-TIMESTAMP      TO SPA-P-VAR-TIMESTAMP.             10760000
+JJ011                                                                   10770000
+JJ011      PERFORM U-100-READNXT1-HATVAC
+JJ011      IF HATVAC-STATUS = +100
+JJ011         MOVE SPACES           TO SPA-MAX-HOURLY-OP-ELEC
+JJ011                                  SPA-P-MAX-HOURLY-OP-ELEC         10770000
+JJ011                                  SPA-MAX-NET-POWER-ELEC           10770000
+JJ011                                  SPA-P-MAX-NET-POWER-ELEC         10770000
+JJ011                                  SPA-MAX-30MIN-PWR-ELEC           10770000
+JJ011                                  SPA-P-MAX-30MIN-PWR-ELEC         10770000
+JJ011      ELSE
+JJ011         PERFORM UNTIL HATVAC-STATUS = +100
+JJ011              EVALUATE VAC-FIELD-NO
+JJ011              WHEN '22   '
+JJ011                IF VAC-SUB-FIELD = '4'
+JJ011                   MOVE VAC-VALUE TO SPA-MAX-HOURLY-OP-ELEC
+JJ011                                     SPA-P-MAX-HOURLY-OP-ELEC
+JJ011                   MOVE VAC-TIMESTAMP TO
+JJ011                           SPA-P-MXHOUROP-ELEC-TIMESTAMP
+JJ011                   SET MXHOURPE-FOUND TO TRUE
+JJ011                END-IF
+JJ011                                                                   10770000
+JJ011                IF VAC-SUB-FIELD = '5'
+JJ011                   MOVE VAC-VALUE TO SPA-MAX-NET-POWER-ELEC
+JJ011                                     SPA-P-MAX-NET-POWER-ELEC
+JJ011                   MOVE VAC-TIMESTAMP TO
+JJ011                           SPA-P-MXNP-ELEC-TIMESTAMP
+JJ011                   SET MXNETPE-FOUND TO TRUE
+JJ011                END-IF
+JJ011                                                                   10770000
+JJ011                IF VAC-SUB-FIELD = '6'
+JJ011                   MOVE VAC-VALUE TO SPA-MAX-30MIN-PWR-ELEC
+JJ011                                     SPA-P-MAX-30MIN-PWR-ELEC
+JJ011                   MOVE VAC-TIMESTAMP TO
+JJ011                           SPA-P-MX30MINP-ELEC-TIMESTAMP
+JJ011                   SET MX30MPE-FOUND TO TRUE
+JJ011                END-IF
+JJ011                                                                   10770000
+JJ011            END-EVALUATE
+JJ011                                                                   10770000
+JJ011            PERFORM U-100-READNXT1-HATVAC
+JJ011                                                                   10770000
+JJ011         END-PERFORM
+JJ011      END-IF.
+JJ011                                                                   10770000
+./ ADD NAME=OUTTERM
+                                                                        11020000
+      ****************************************************************  11030000
+      *                                                              *  11040000
+      *     PROTECT CHIP DATA                                        *  11050000
+      *                                                              *  11060000
+      ****************************************************************  11070000
+                                                                        11080000
+             IF SPA-CHIP-DATA = 'Y'                                     11090000
+                MOVE PROT-ATTR TO  TPO-ENCODE-ATTR                      11100000
+                                   TPO-ENMANU-ATTR                      11110000
+                                   TPO-WORKPRIN-ATTR                    11120000
+                                   TPO-DIRINJEC-ATTR                    11130000
+                                   TPO-NOARRCYL-ATTR                    11140000
+                                   TPO-FUEL-ATTR                        11150000
+                                   TPO-CAPACITY-ATTR                    11160000
+                                   TPO-POWER-ATTR                       11170000
+                                                                        11180000
+                                                                        11190000
+                                                                        11200000
+                MOVE NEUTRAL-ATTR TO TPO-ENCODE-C-ATTR                  11210000
+                                     TPO-ENMANU-C-ATTR                  11220000
+                                     TPO-WORKPRIN-C-ATTR                11230000
+                                     TPO-DIRINJEC-C-ATTR                11240000
+                                     TPO-NOARRCYL-C-ATTR                11250000
+                                     TPO-FUEL-C-ATTR                    11260000
+                                     TPO-CAPACITY-C-ATTR                11270000
+                                     TPO-POWER-C-ATTR                   11280000
+                                                                        11290000
+                                                                        11300000
+              END-IF.                                                   11310000
+                                                                        11320000
+JA009 ***************************************************************   11330000
+JA009 *PROTECT PART OF WORKING PRINCLPLE IF MANF IS FORD/JAG        *   11340000
+JA009 ***************************************************************   11350000
+JA009       IF SPA-MANF-CODE = 'F'                                      11360000
+JA009          MOVE PROT-ATTR         TO TPO-ENGCYCL-ATTR               11370000
+JA009                                    TPO-ENGCYC-ATTR                11380000
+JA009                                    TPO-ENGIGNL-ATTR               11390000
+JA009                                    TPO-ENGIGN-ATTR                11400000
+JA009                                                                   11410000
+JA009          MOVE OUTPUT-BLANK-ATTR TO TPO-ENGCYC-ATTR                11420000
+JA009                                    TPO-ENGIGN-ATTR                11430000
+JA009       END-IF.                                                     11440000
+JA009                                                                   11450000
+JA009       IF SPA-MANF-CODE = 'L'                                      11460000
+JA009          MOVE OUTPUT-BLANK-ATTR TO TPO-WORKPRIN-ATTR              11470000
+JA009       END-IF.                                                     11480000
+                                                                        11490000
+JA009       IF SPA-MANF-CODE = 'J'                                      11500000
+               IF SPA-SDATE < '2007-08-01'                              11510000
+JA009              MOVE PROT-ATTR         TO TPO-ENGCYCL-ATTR           11520000
+JA009                                        TPO-ENGCYC-ATTR            11530000
+JA009                                        TPO-ENGIGNL-ATTR           11540000
+JA009                                        TPO-ENGIGN-ATTR            11550000
+JA009                                                                   11560000
+JA009              MOVE OUTPUT-BLANK-ATTR TO TPO-ENGCYC-ATTR            11570000
+JA009                                        TPO-ENGIGN-ATTR            11580000
+JA009          ELSE                                                     11590000
+JA009                                                                   11600000
+JA009                                                                   11610000
+JA009              MOVE OUTPUT-BLANK-ATTR TO TPO-WORKPRIN-ATTR          11620000
+JA009          END-IF                                                   11630000
+JA009       END-IF.                                                     11640000
+                                                                        11650000
+./ ADD NAME=REMARKS
+                                                                        11670000
+      ****************************************************************  11680000
+      *                                                              *  11690000
+      * THIS PROGRAM ENABLES THE USER TO RECORD THE INFORAMTION FOR  *  11700000
+      * THE COC THAT IS FIXED BY TYPE / VARIANT                      *  11710000
+      *                                                              *  11720000
+      *                                                              *  11730000
+      * COPY BOOKS USED                                              *  11740000
+      *                                                              *  11750000
+      *   HASPA001 : SPA COPY CODE CONTAINING PROJECT WIDE VARIABLES *  11760000
+      *   HATIMEST : COPY BOOK TO OBTAIN TIMESTAMP FOR UPDATES       *  11770000
+      *                                                              *  12010000
+      *                                                              *  12020000
+      * DATE 26/10/1995                                              *  12030000
+      * AUTHOR P NASH                                                *  12040000
+      * CHANGE NOTIFICATION : INITIAL VERSION                        *  12050000
+      *  01      PN   26/10   OR36 MOVE COC FIELD TO HATVAR TABLE    *  12060000
+      *                                                              *  12070000
+      *  02      PN   11/01    OR 10 ADD HELP SYSTEM                 *  12080000
+      *                                                              *  12090000
+      *  04      PN   27/02    OR 155 ADD MANUFACTURER TO DB2 CALLS  *  12100000
+      *                                                              *  12110000
+      *  05      PL   19/6/96  RELEASE CHANGE.CHANGE THE WIDTH OF    *  12120000
+      *                        TYPE AND VARIANT.                     *  12130000
+      *                                                              *  12140000
+      *  06      DAB 01/09/97  OR 218 DISPLAY APPROVAL NUMBER/DATE   *  12150000
+      *                        RATHER THAN CREATION DATE.            *  12160000
+      *                                                              *  12170000
+      * Y2K COMPLIANCE CHECKED/OK - 15/01/1998 DAVE BUXTON           *  12180000
+      *                                                              *  12190000
+      *  07      AJK 27/05/02  INCREASE ENGINE MANUFACTURER FIELD    *  12200000
+      *                        FROM 18 TO 25 CHARACTERS.             *  12210000
+      *                                                              *  12220000
+MD008 *  08      MXD 20/01/04  HRD 4 - VALIDATE SOME INPUT FIELDS    *  12230000
+MD008 *                                                              *  12240000
+MD008 *  09      JA  11/04/06  TD767 - ADD LAND ROVER                *  12250000
+      *                                                              *  12260000
+MD008 *  10      PN  01/02/08  TD4098 ADD  PROTUGUESE REGSITRATION   *  12270000
+MD008 *                         FOR JAGUAR  AND LAND ROVER           *  12280000
+      *                                                              *  12290000
+JJ011 *  11      JJ  29/07/14  EU/136/2014 - ADD 3 NEW ELECTRIC      *  12270000
+JJ011 *                         POWER VALUES AND HATVAC FOR 22:4,    *  12280000
+JJ011 *                         22:5 AND 22:6.                       *  12280000
+      *                                                              *  12290000
+JJ012 *  12      JJ  09/02/15  EU/136/2014 - CHANGE FORMAT MAPPING   *  12270000
+JJ012 *                         VALIDATION ON 22:4, 22:5 AND 22:6    *  12280000
+JJ012 *                         FROM 9999 AND 999 TO 999.99, 99.99,  *  12280000
+JJ012 *                         9.99, 999.9, 99.9, 9.9, 999, 99 AND  *  12280000
+JJ012 *                         9.                                   *  12280000
+      *                                                              *  12290000
+      ****************************************************************  12300000
+                                                                        12310000
+                                                                        12320000
+./ ADD NAME=R1HATVAC
+      *    KEY FOR READNXT1 OF HATVAC TABLE
+      *    KEY FOR READNXT1 OF HATVAC TABLE                             22190000
+                                                                        22200000
+      ****************************************************************  22210000
+      *                                                              *  22220000
+      * KEY FOR READNEXT OF HATVAC TABLE                             *  22230000
+      *                                                              *  22240000
+      ****************************************************************  22250000
+                                                                        22260000
+              WHERE VAC_MODEL      = :SPA-MODEL                         22270000
+              AND   VAC_MANF       = :SPA-MANF-CODE                     22280000
+              AND   VAC_TYPE       = :SPA-TYPE                          22290000
+              AND   VAC_START_DATE = :WS-SDATE-DB2                      22300000
+              AND   VAC_END_DATE   = :WS-EDATE-DB2                      22310000
+              AND   VAC_VARIANT    = :SPA-VARIANT                       22320000
+              AND   VAC_SUB_FIELD IN ('4','5','6')                      22330000
+              AND   VAC_FIELD_NO IN ('22')                              22340000
+./ ADD NAME=R2HATVAC
+      *    KEY FOR READNXT2 ON VAC                                      22380000
+      *    DEFAULT GENERATED DATA ACCESS                                22390000
+      *    DEFAULT CALL: ** U-100-READNXT2-HATVAC *                     22400000
+              WHERE   (VAC_MODEL = :SPA-MODEL                           22410000
+                 AND   VAC_MANF = :SPA-MANF-CODE                        22420000
+                 AND   VAC_TYPE = :SPA-TYPE                             22430000
+                 AND   VAC_START_DATE = :WS-SDATE-DB2                   22440000
+                 AND   VAC_END_DATE = :WS-EDATE-DB2                     22450000
+                 AND   VAC_VARIANT  = :SPA-VARIANT                      22460000
+                 AND   VAC_FIELD_NO = :WS-FIELD-NO                      22470000
+                 AND   VAC_SUB_FIELD = :WS-SUB-FIELD                    22480000
+                 AND   VAC_TIMESTAMP = :WS-TIMESTAMP)                   22490000
+      *                                                                 22500000
+./ ADD NAME=UPHATVAC
+      *    CPYKEY  FOR UPDATE TO HATVAC
+      *    CPYKEY  FOR UPDATE TO HATVAC                                 22520000
+                                                                        22530000
+              WHERE   (VAC_MODEL = :SPA-MODEL                           22540000
+                 AND   VAC_MANF = :SPA-MANF-CODE                        22550000
+                 AND   VAC_TYPE = :SPA-TYPE                             22560000
+                 AND   VAC_START_DATE = :WS-SDATE-DB2                   22570000
+                 AND   VAC_END_DATE = :WS-EDATE-DB2                     22580000
+                 AND   VAC_VARIANT  = :SPA-VARIANT                      22590000
+                 AND   VAC_FIELD_NO = :WS-FIELD-NO                      22600000
+                 AND   VAC_SUB_FIELD = :WS-SUB-FIELD)                   22610000
+./ ADD NAME=UPHATVAR
+      *    CPYKEY  FOR UPDATE TO HATVAR                                 12340000
+      *    CPYCALL FOR UPDATE TO HATVAR                                 12350000
+      *    DEFAULT GENERATED DATA ACCESS                                12360000
+      *    DEFAULT CALL: ** U-100-UPDATE-HATVAR ***                     12370000
+                                                                        12380000
+                                                                        12390000
+                                                                        12400000
+              WHERE   (VAR_MODEL = :SPA-MODEL                           12410000
+                 AND   VAR_MANF = :SPA-MANF-CODE                        12420000
+                 AND   VAR_TYPE = :SPA-TYPE                             12430000
+                 AND   VAR_START_DATE = :WS-SDATE-DB2                   12440000
+                 AND   VAR_END_DATE = :WS-EDATE-DB2                     12450000
+                 AND   VAR_VARIANT  = :SPA-VARIANT )                    12460000
+./ ADD NAME=WKAREA
+                                                                        12480000
+      ****************************************************************  12490000
+      *                                                              *  12500000
+      *  WORK AREA FOR ONLINE PROGRAM HAIM03U                        *  12510000
+      *                                                              *  12520000
+      ****************************************************************  12530000
+                                                                        12540000
+                                                                        12550000
+       01 WS-OTH-VARIABLES.                                             12560000
+                 05 WS-VAR-TIMESTAMP             PIC X(26).             12570000
+                 05 WS-HAIMALOG                  PIC X(8)               12580000
+                                                 VALUE 'HAIMALOG'.      12590000
+JA009            05 WS-ENGINE-CYCLE-LIT          PIC X(25).             12600000
+JA009            05 WS-ENGINE-IGNITION-LIT       PIC X(25).             12610000
+JA009            05 WS-WORKING-PRINCIPLE-CONCAT  PIC X(50).             12620000
+JJ011            05 WS-TIMESTAMP                 PIC X(26).
+JJ011            05 WS-FIELD-NO                  PIC X(5).
+JJ011            05 WS-SUB-FIELD                 PIC X(3).
+JJ011            05 WS-VAC-VALUE                 PIC X(75).
+JJ011            05 WS-ERROR-INDICATOR           PIC X VALUE SPACE.
+JJ011               88 WS-ERROR                  VALUE 'Y'.
+                                                                        12630000
+JA009  01 WS-FLAGS.                                                     12640000
+JA009            05 WS-COMMA-INDICATOR           PIC X VALUE 'N'.       12650000
+JA009               88 WS-COMMA-FOUND                  VALUE 'Y'.       12660000
+JA009               88 WS-COMMA-NOT-FOUND              VALUE 'N'.       12670000
+JA009                                                                   12680000
+JA009  01 WS-COUNTERS.                                                  12690000
+JA009            05 WS-COUNT                     PIC 99.                12700000
+JA009            05 WS-MAX-LENGTH                PIC 99.                12710000
+JA009            05 WS-ENGCYC-MAX                PIC 99.                12720000
+JA009            05 WS-ENGIGN-MAX                PIC 99.                12730000
+JA009                                                                   12740000
+       01 WS-DATE-VARIABLES.                                            12750000
+                 05 WS-DATE-IN-WORK-LTH          PIC 9(4) COMP VALUE 8. 12760000
+                 05 WS-SDATE-DB2                 PIC X(10).             12770000
+                 05 WS-EDATE-DB2                 PIC X(10).             13010000
+                 05 WS-DATE-IN.                                         13020000
+                    10 WS-DATE-IN-YYYY           PIC X(4).              13030000
+                    10 FILLER                    PIC X VALUE '-'.       13040000
+                    10 WS-DATE-IN-MM             PIC XX.                13050000
+                    10 FILLER                    PIC X VALUE '-'.       13060000
+                    10 WS-DATE-IN-DD             PIC XX.                13070000
+                 05 WS-CONVERTED-DATE.                                  13080000
+                    10 WS-DATE-CON-DD            PIC XX.                13090000
+                    10 WS-FILLER-3               PIC X VALUE '/'.       13100000
+                    10 WS-DATE-CON-MM            PIC XX.                13110000
+                    10 WS-FILLER-4               PIC X VALUE '/'.       13120000
+                    10 WS-DATE-CON-YYYY.                                13130000
+                       15 WS-DATE-CON-CC         PIC XX.                13140000
+                       15 WS-DATE-CON-YY         PIC XX.                13150000
+                 05 WS-DATE-IN-WORK.                                    13160000
+                    10 WS-MM-USA                      PIC 99.           13170000
+                    10 WS-FILLER1                     PIC X.            13180000
+                    10 WS-DD-USA                      PIC 99.           13190000
+                    10 WS-FILLER2                     PIC X.            13200000
+                    10 WS-YY-USA                      PIC 99.           13210000
+                                                                        13220000
+                 05 WS-SDATE1.                                          13230000
+                    10 WS-SDATE1-YEAR                 PIC 9999.         13240000
+                    10 WS-SDATE1-MM                   PIC 99.           13250000
+                    10 WS-SDATE1-DD                   PIC 99.           13260000
+                 05 WS-SDATE-NUM REDEFINES WS-SDATE1  PIC 9(8).         13270000
+                                                                        13280000
+                 05 WS-ERR1                           PIC 99.           13290000
+                                                                        13300000
+MD020  COPY HAVAL1A.                                                    13310000
+                                                                        13320000

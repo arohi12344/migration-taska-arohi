@@ -1,0 +1,1637 @@
+./ ADD NAME=SCRNDEF
+***********************************************************************
+*  HA003R.SD     EXPORTED ON: 02/18/10 13:30:31    BY: W#B055PD       *
+***********************************************************************
+***********************************************************************
+*                LAST UPDATE: 02/18/10 13:28       BY: W#B055PD       *
+***********************************************************************
+         TELON LANGLVL=2.4,LANG=COBOL,HEADER=HA,ID=003R
+***********************************************************************
+*                 D B 2    T A B L E S                                *
+***********************************************************************
+HATCOC   TABLE NAME=HAT_COC_TYPE,QUAL=DDHA102,                         C
+               DESC='CREATED BY DB2 CATALOG IMPORT',DCLCOPY=HATCOC,    C
+               DCLLBL=DCLHAT-COC-TYPE,COPY=NONE,SYNONYM=Y
+HATCOC   TLNROW
+         DCLCOL NAME=COC_MODEL,TYPE=CHAR,LTH=0001,NOTNULL=Y,           C
+               ALIAS=COC-MODEL,KEY=Y,DCLHOST=COC-MODEL
+         DCLCOL NAME=COC_TYPE,TYPE=CHAR,LTH=0004,NOTNULL=Y,            C
+               ALIAS=COC-TYPE,KEY=Y,DCLHOST=COC-TYPE
+         DCLCOL NAME=COC_START_DATE,TYPE=DATE,LTH=0010,NOTNULL=Y,      C
+               ALIAS=COC-START-DATE,KEY=Y,DCLHOST=COC-START-DATE
+         DCLCOL NAME=COC_END_DATE,TYPE=DATE,LTH=0010,NOTNULL=Y,        C
+               ALIAS=COC-END-DATE,KEY=Y,DCLHOST=COC-END-DATE
+         DCLCOL NAME=COC_FIELD_NO,TYPE=CHAR,LTH=0005,NOTNULL=Y,        C
+               ALIAS=COC-FIELD-NO,KEY=Y,DCLHOST=COC-FIELD-NO
+         DCLCOL NAME=COC_SUB_FIELD,TYPE=CHAR,LTH=0003,NOTNULL=Y,       C
+               ALIAS=COC-SUB-FIELD,KEY=Y,DCLHOST=COC-SUB-FIELD
+         DCLCOL NAME=COC_COUNTRY,TYPE=CHAR,LTH=0002,NOTNULL=Y,         C
+               ALIAS=COC-COUNTRY,KEY=Y,DCLHOST=COC-COUNTRY
+         DCLCOL NAME=COC_VALUE,TYPE=CHAR,LTH=0075,NOTNULL=Y,           C
+               ALIAS=COC-VALUE,DCLHOST=COC-VALUE
+         DCLCOL NAME=COC_USERID,TYPE=CHAR,LTH=0008,NOTNULL=Y,          C
+               ALIAS=COC-USERID,DCLHOST=COC-USERID
+         DCLCOL NAME=COC_TIMESTAMP,TYPE=TIMESTAMP,LTH=0026,NOTNULL=Y,  C
+               ALIAS=COC-TIMESTAMP,DCLHOST=COC-TIMESTAMP
+         DCLCOL NAME=COC_MANF,TYPE=CHAR,LTH=0001,NOTNULL=Y,            C
+               ALIAS=COC-MANF,KEY=Y,DCLHOST=COC-MANF
+HATTL1   TABLE NAME=HAT_TL1_TELONHLD,QUAL=DDHA102,                     C
+               DESC='CREATED BY DB2 CATALOG IMPORT',DCLCOPY=HATTL1,    C
+               DCLLBL=DCLHAT-TL1-TELONHLD,COPY=NONE,SYNONYM=Y
+HATTL1   TLNROW
+         DCLCOL NAME=TL1_USERID,TYPE=CHAR,LTH=0008,NOTNULL=Y,          C
+               ALIAS=TL1-USERID,KEY=Y,DCLHOST=TL1-USERID
+         DCLCOL NAME=TL1_TYPE,TYPE=CHAR,LTH=0001,NOTNULL=Y,            C
+               ALIAS=TL1-TYPE,KEY=Y,DCLHOST=TL1-TYPE
+         DCLCOL NAME=TL1_LEVEL,TYPE=SMALLINT,LTH=0002,NOTNULL=Y,       C
+               ALIAS=TL1-LEVEL,KEY=Y,DCLHOST=TL1-LEVEL
+         DCLCOL NAME=TL1_PGM_ID,TYPE=CHAR,LTH=0004,NOTNULL=Y,          C
+               ALIAS=TL1-PGM-ID,DCLHOST=TL1-PGM-ID
+         DCLCOL NAME=TL1_DATA,TYPE=LONGVARCHAR,LTH=4030,NOTNULL=Y,     C
+               ALIAS=TL1-DATA,DCLHOST=TL1-DATA
+HATVAC   TABLE NAME=HAT_VAC_VARIANT,QUAL=DDHA102,                      C
+               DESC='CREATED BY DB2 CATALOG IMPORT',DCLCOPY=HATVAC,    C
+               DCLLBL=DCLHAT-VAC-VARIANT,COPY=NONE,SYNONYM=Y
+HATVAC   TLNROW
+         DCLCOL NAME=VAC_MANF,TYPE=CHAR,LTH=0001,NOTNULL=Y,            C
+               ALIAS=VAC-MANF,KEY=Y,DCLHOST=VAC-MANF
+         DCLCOL NAME=VAC_MODEL,TYPE=CHAR,LTH=0001,NOTNULL=Y,           C
+               ALIAS=VAC-MODEL,KEY=Y,DCLHOST=VAC-MODEL
+         DCLCOL NAME=VAC_TYPE,TYPE=CHAR,LTH=0004,NOTNULL=Y,            C
+               ALIAS=VAC-TYPE,KEY=Y,DCLHOST=VAC-TYPE
+         DCLCOL NAME=VAC_START_DATE,TYPE=DATE,LTH=0010,NOTNULL=Y,      C
+               ALIAS=VAC-START-DATE,KEY=Y,DCLHOST=VAC-START-DATE
+         DCLCOL NAME=VAC_END_DATE,TYPE=DATE,LTH=0010,NOTNULL=Y,        C
+               ALIAS=VAC-END-DATE,KEY=Y,DCLHOST=VAC-END-DATE
+         DCLCOL NAME=VAC_VARIANT,TYPE=CHAR,LTH=0006,NOTNULL=Y,         C
+               ALIAS=VAC-VARIANT,KEY=Y,DCLHOST=VAC-VARIANT
+         DCLCOL NAME=VAC_FIELD_NO,TYPE=CHAR,LTH=0005,NOTNULL=Y,        C
+               ALIAS=VAC-FIELD-NO,KEY=Y,DCLHOST=VAC-FIELD-NO
+         DCLCOL NAME=VAC_SUB_FIELD,TYPE=CHAR,LTH=0003,NOTNULL=Y,       C
+               ALIAS=VAC-SUB-FIELD,KEY=Y,DCLHOST=VAC-SUB-FIELD
+         DCLCOL NAME=VAC_VALUE,TYPE=CHAR,LTH=0075,NOTNULL=Y,           C
+               ALIAS=VAC-VALUE,DCLHOST=VAC-VALUE
+         DCLCOL NAME=VAC_USERID,TYPE=CHAR,LTH=0008,NOTNULL=Y,          C
+               ALIAS=VAC-USERID,DCLHOST=VAC-USERID
+         DCLCOL NAME=VAC_TIMESTAMP,TYPE=TIMESTAMP,LTH=0026,NOTNULL=Y,  C
+               ALIAS=VAC-TIMESTAMP,DCLHOST=VAC-TIMESTAMP
+***********************************************************************
+*    SCREEN DESCRIPTION ~~ UPDATE COC CONTENT (TYPE/ VARIANT)         *
+***********************************************************************
+         SCREEN 003R,HEADER=HA,                                        C
+               DESC='UPDATE COC CONTENT (TYPE/ VARIANT)',PFKEYS=(INI,  C
+               1,3,5,7,8,11,OTH),SECTION=(HAZ100T,HAZ200T,HAZ300T,     C
+               HAZ600T,HAZ700T,HAZ300I,HAZ400I,HAZ800T,HAZ900T,HAZ720T,C
+               HAZ820T,HAZ920T,HAZ150T),WKAREA=WKAREA,XFERWKA=(HASPA001C
+               ,HASP003R),LANG=COBOL,CURSOR=VINUB1,CAPS=OFF,           C
+               OINIT1=OINIT1,REMARKS=REMARKS,ININIT1=ININIT1,          C
+               INTERM=INTERM,OUTTERM=OUTTERM,ALARM=N,EOFKEY=Y,HELP=Y,  C
+               HOLD=Y,OUTIFIL=UNDERLINE,REFRESH=Y,EATTR=Y,EAIN=(GREEN,)C
+               ,EAERR=(RED,),EALIT=(TURQ,),EAOUT=(NEUTRAL,),UPDTA=N
+***********************************************************************
+*                   D A T A   A C C E S S                             *
+***********************************************************************
+HATCOC   DB2 TBLQUAL=DDHA102,TBLNAME=HAT_COC_TYPE,SYNONYM=Y
+HATCOC   ROW @DEFINE,TBLQUAL=DDHA102,TBLNAME=HAT_COC_TYPE
+         CREATE HATCOC
+         DELETE HATCOC,CPYKEY=DEHATCOC
+         READ HATCOC,KEY=(SPA-MODEL,SPA-TYPE,WS-SDATE-DB2,WS-EDATE-DB2,C
+               WS-FIELD-NO,WS-SUB-FIELD,WS-COUNTRY,SPA-MANF-CODE),     C
+               IGNORE=+100
+READNXT1 READNEXT HATCOC,CPYKEY=R1HATCOC
+READNXT3 READNEXT HATCOC,CPYKEY=R3HATCOC
+         UPDATE HATCOC,CPYKEY=UPHATCOC
+*
+HATTL1   DB2 TBLQUAL=DDHA102,TBLNAME=HAT_TL1_TELONHLD,SYNONYM=Y
+HATTL1   ROW @HOLD,TBLQUAL=DDHA102,TBLNAME=HAT_TL1_TELONHLD
+AUTOEXEC HOLD HATTL1
+*
+HATVAC   DB2 TBLQUAL=DDHA102,TBLNAME=HAT_VAC_VARIANT,SYNONYM=Y
+HATVAC   ROW @DEFINE,TBLQUAL=DDHA102,TBLNAME=HAT_VAC_VARIANT
+         CREATE HATVAC
+         DELETE HATVAC,CPYKEY=DEHATVAC
+         READ HATVAC,KEY=(SPA-MANF-CODE,SPA-MODEL,SPA-TYPE,            C
+               WS-SDATE-DB2,WS-EDATE-DB2,SPA-VARIANT,WS-FIELD-NO,      C
+               WS-SUB-FIELD),IGNORE=+100,KEYCOLS=(VAC_MANF,VAC_MODEL,  C
+               VAC_TYPE,VAC_START_DATE,VAC_END_DATE,VAC_VARIANT,       C
+               VAC_FIELD_NO,VAC_SUB_FIELD)
+READNXT1 READNEXT HATVAC,CPYKEY=R1HATVAC
+READNXT3 READNEXT HATVAC,CPYKEY=R3HATVAC
+         UPDATE HATVAC,CPYKEY=UPHATVAC
+***********************************************************************
+         PANEL SIZE=(024,080),UPRLWR=L
+***********************************************************************
+*                     L I T E R A L S                                 *
+***********************************************************************
+         FIELD LITERAL,POS=(01,002),                                   C
+               TEXT='WVTA  HA003R 10 Update CoC Content (Type/Variant)'
+         FIELD LITERAL,POS=(03,056),TEXT='Page No 02 More Data ...'
+         FIELD LITERAL,POS=(04,002),TEXT='Typ  Var.'
+         FIELD LITERAL,POS=(04,015),                                   C
+               TEXT='Approval Date/No. Type Description'
+         FIELD LITERAL,POS=(04,063),TEXT='Engine'
+         FIELD LITERAL,POS=(08,002),                                   C
+               TEXT='Location and method of attachement of Vin Plate'
+         FIELD LITERAL,POS=(12,002),                                   C
+               TEXT='Location of Vehicle identification number on ChassC
+               is'
+         FIELD LITERAL,POS=(16,002),                                   C
+               TEXT='Type / Commercial Description'
+         FIELD LITERAL,POS=(18,002),TEXT='Remarks'
+         FIELD LITERAL,POS=(24,002),                                   C
+               TEXT='PFK 8 to View Update CoC Content (Type/Variant) HAC
+               003D'
+***********************************************************************
+*                     V A R I A B L E S                               *
+***********************************************************************
+DATE     FIELD OUTPUT,POS=(01,072),LTH=008,DBNAME=SPA-TODAYS-DATE,     C
+               EACOLOR=TURQ
+ERRMSG1  FIELD OUTPUT,POS=(02,002),LTH=077,FLDTYPE=NONE,EACOLOR=RED,   C
+               ATTRINT=HIGH
+TYPE     FIELD OUTPUT,POS=(05,002),LTH=004,DBNAME=SPA-TYPE
+VARIANT  FIELD OUTPUT,POS=(05,007),LTH=006,DBNAME=SPA-VARIANT
+APPRDATE FIELD OUTPUT,POS=(05,015),LTH=010,DBNAME=SPA-APPR-DATE
+TYPDES   FIELD OUTPUT,POS=(05,033),LTH=028,DBNAME=SPA-TYP-DES
+ENGINE   FIELD OUTPUT,POS=(05,063),LTH=012,DBNAME=SPA-ENGINE
+APPRNO   FIELD OUTPUT,POS=(06,015),LTH=028,DBNAME=SPA-APPROVAL-NO
+VINUB1   FIELD OUTIN,POS=(09,010),LTH=018,DBNAME=WS-VINPLATE-UB1
+VINUB2   FIELD OUTIN,POS=(09,032),LTH=018,DBNAME=WS-VINPLATE-UB2
+VINUB3   FIELD OUTIN,POS=(09,054),LTH=018,DBNAME=WS-VINPLATE-UB3
+VINUB4   FIELD OUTIN,POS=(10,010),LTH=050,DBNAME=WS-VINPLATE-UB4
+LOCOFVIN FIELD OUTIN,POS=(13,010),LTH=070,DBNAME=WS-LOCATION-OF-VIN
+LOCOFVI2 FIELD OUTIN,POS=(14,010),LTH=070,DBNAME=WS-LOCATION-OF-VIN2
+COMDESUB FIELD OUTIN,POS=(17,010),LTH=030,DBNAME=WS-COMMERCIAL-DESC-UB
+REMUB1   FIELD OUTIN,POS=(19,003),LTH=075,DBNAME=WS-REMARKS-UB1
+REMUB2   FIELD OUTIN,POS=(20,003),LTH=075,DBNAME=WS-REMARKS-UB2
+REMUB3   FIELD OUTIN,POS=(21,003),LTH=075,DBNAME=WS-REMARKS-UB3
+REMUB4   FIELD OUTIN,POS=(22,003),LTH=075,DBNAME=WS-REMARKS-UB4
+REMUB5   FIELD OUTIN,POS=(23,003),LTH=075,DBNAME=WS-REMARKS-UB5
+         IMSPGM CONVERS=Y,SPASIZE=05120,TRANCDE=HAIM003R,LINKOPT=D,    C
+               SPACMPT=Y,TRACE=Y,GENPCBS=Y,MSGPGM=ANY,A4EMSG=WS-A4EMSG
+         IMSPSB
+         IMSMFS TRANMFS=Y,TRANCDE=HAIM003R
+         END
+./ ADD NAME=DEHATCOC
+      *    CPYKEY  FOR UPDATE TO HATCOC
+      *    CPYCALL FOR UPDATE TO HATCOC
+      *    DEFAULT GENERATED DATA ACCESS
+      *    DEFAULT CALL: ** U-100-UPDATE-HATCOC ***
+
+              WHERE   (COC_MODEL = :SPA-MODEL
+                 AND   COC_MANF = :SPA-MANF-CODE
+                 AND   COC_TYPE = :SPA-TYPE
+                 AND   COC_START_DATE = :WS-SDATE-DB2
+                 AND   COC_END_DATE = :WS-EDATE-DB2
+                 AND   COC_FIELD_NO = :WS-FIELD-NO
+                 AND   COC_SUB_FIELD = :WS-SUB-FIELD
+                 AND   COC_COUNTRY   = :WS-COUNTRY  )
+./ ADD NAME=DEHATVAC
+      *    CPYKEY FOR DELETE OF HATVAC
+      *    DEFAULT GENERATED DATA ACCESS
+      *    DEFAULT CALL: ** U-100-DELETE-HATVAC ***
+
+              WHERE   (VAC_MODEL = :SPA-MODEL
+                 AND   VAC_MANF = :SPA-MANF-CODE
+                 AND   VAC_TYPE = :SPA-TYPE
+                 AND   VAC_START_DATE = :WS-SDATE-DB2
+                 AND   VAC_END_DATE = :WS-EDATE-DB2
+                 AND   VAC_VARIANT  = :SPA-VARIANT
+                 AND   VAC_FIELD_NO = :WS-FIELD-NO
+                 AND   VAC_SUB_FIELD = :WS-SUB-FIELD )
+./ ADD NAME=HAPFKINI
+
+      ****************************************************************
+      *                                                              *
+      *     BLANK OUT SPA-APPROVAL NUMBER/DATE ON EXIT               *
+      *                                                              *
+      ****************************************************************
+
+             IF PFK3 OR PFK5
+                MOVE SPACES TO SPA-APPROVAL-NO
+                               SPA-APPR-DATE
+             END-IF.
+
+./ ADD NAME=HAPFK7
+      *    PROCESSING FOR PF6 AND PF7 KEYS
+
+      ****************************************************************
+      *                                                              *
+      *     PROCESS PFKEY 7 & 6  FOR SCREEN HA003U                   *
+      *                                                              *
+      ****************************************************************
+             IF PFK7 OR PFK6
+                MOVE '003U' TO NEXT-PROGRAM-NAME-ID
+                MOVE DO-TRANSFER-LIT TO CONTROL-INDICATOR
+                GO TO P-100-PFKEYS-RETURN
+             END-IF.
+./ ADD NAME=HAPFK8
+
+      ****************************************************************
+      *                                                              *
+      *     PROCESS PFKEY 8  FOR SCREEN HA003U                       *
+      *                                                              *
+      ****************************************************************
+             IF PFK8
+                MOVE '003D' TO NEXT-PROGRAM-NAME-ID
+                MOVE DO-TRANSFER-LIT TO CONTROL-INDICATOR
+                GO TO P-100-PFKEYS-RETURN
+             END-IF.
+./ ADD NAME=HASP003R
+      *****************************************************************
+      *                COPYCODE TITLE BLOCK
+      * MEMBER NAME : HASPHA03
+      * AUTHOR      : PAUL NASH
+      * SYNOPSIS    : SPA COPYBOOK  CONTAINING VARIABLES USE IN PROGRAM
+      *               HAIM03U
+      *
+      * AMENDMENTS  : (07/09/94 - PN) INITIAL RELEASE.
+JA010 *               (10/04/06 - JA) TD 767 - ADD LAND ROVER
+      *****************************************************************
+
+
+              03 SPA-P-HA03R-AREA REDEFINES SPA-HAPS-PROGRAM-AREA.
+
+                 05 SPA-P-VINPLATE-UB1           PIC X(18).
+                 05 SPA-P-VINPLATE-UB1-TIMESTAMP PIC X(26).
+                 05 SPA-P-VINPLATE-UB2           PIC X(18).
+                 05 SPA-P-VINPLATE-UB2-TIMESTAMP PIC X(26).
+                 05 SPA-P-VINPLATE-UB3           PIC X(18).
+                 05 SPA-P-VINPLATE-UB3-TIMESTAMP PIC X(26).
+JA010            05 SPA-P-VINPLATE-UB4           PIC X(50).
+JA010            05 SPA-P-VINPLATE-UB4-TIMESTAMP PIC X(26).
+                 05 SPA-P-LOCATION-OF-VIN        PIC X(70).
+                 05 SPA-P-LOC-OF-VIN-TIMESTAMP   PIC X(26).
+JA010            05 SPA-P-LOCATION-OF-VIN2       PIC X(70).
+JA010            05 SPA-P-LOC-OF-VIN2-TIMESTAMP  PIC X(26).
+                 05 SPA-P-COMMERCIAL-DESC-UB     PIC X(30).
+                 05 SPA-P-COM-DESC-UB-TIMESTAMP  PIC X(26).
+                 05 SPA-P-REMARKS-UB1            PIC X(75).
+                 05 SPA-P-REMARKS-UB1-TIMESTAMP  PIC X(26).
+                 05 SPA-P-REMARKS-UB2            PIC X(75).
+                 05 SPA-P-REMARKS-UB2-TIMESTAMP  PIC X(26).
+                 05 SPA-P-REMARKS-UB3            PIC X(75).
+                 05 SPA-P-REMARKS-UB3-TIMESTAMP  PIC X(26).
+                 05 SPA-P-REMARKS-UB4            PIC X(75).
+                 05 SPA-P-REMARKS-UB4-TIMESTAMP  PIC X(26).
+                 05 SPA-P-REMARKS-UB5            PIC X(75).
+                 05 SPA-P-REMARKS-UB5-TIMESTAMP  PIC X(26).
+
+
+                 05 SPA-P-VINPLATE-UB1-INDICATOR PIC X.
+                    88 SPA-P-VINPLATE-UB1-FOUND       VALUE 'Y'.
+                 05 SPA-P-VINPLATE-UB2-INDICATOR PIC X.
+                    88 SPA-P-VINPLATE-UB2-FOUND       VALUE 'Y'.
+                 05 SPA-P-VINPLATE-UB3-INDICATOR PIC X.
+                    88 SPA-P-VINPLATE-UB3-FOUND       VALUE 'Y'.
+JA010            05 SPA-P-VINPLATE-UB4-INDICATOR PIC X.
+JA010               88 SPA-P-VINPLATE-UB4-FOUND       VALUE 'Y'.
+
+                 05 SPA-P-COM-DESC-UB-INDICATOR  PIC X.
+                    88 SPA-P-COM-DESC-UB-FOUND        VALUE 'Y'.
+                 05 SPA-P-LOC-OF-VIN-INDICATOR   PIC X.
+                    88 SPA-P-LOC-OF-VIN-FOUND         VALUE 'Y'.
+JA010            05 SPA-P-LOC-OF-VIN2-INDICATOR  PIC X.
+JA010               88 SPA-P-LOC-OF-VIN2-FOUND        VALUE 'Y'.
+
+                 05 SPA-P-REMARKS-UB1-INDICATOR  PIC X.
+                    88 SPA-P-REMARKS-UB1-FOUND        VALUE 'Y'.
+                 05 SPA-P-REMARKS-UB2-INDICATOR  PIC X.
+                    88 SPA-P-REMARKS-UB2-FOUND        VALUE 'Y'.
+                 05 SPA-P-REMARKS-UB3-INDICATOR  PIC X.
+                    88 SPA-P-REMARKS-UB3-FOUND        VALUE 'Y'.
+                 05 SPA-P-REMARKS-UB4-INDICATOR  PIC X.
+                    88 SPA-P-REMARKS-UB4-FOUND        VALUE 'Y'.
+                 05 SPA-P-REMARKS-UB5-INDICATOR  PIC X.
+                    88 SPA-P-REMARKS-UB5-FOUND        VALUE 'Y'.
+
+./ ADD NAME=HAZ100T
+      *    CHECK VINPLATE FOR CREATE OR UPDATE
+
+      ***************************************************************
+      *                                                             *
+      * UPDATE VINPLATE FIELDS                                      *
+      *                                                             *
+      ***************************************************************
+
+       HA100T-UPDATE-VINPLATE-FIELD  SECTION.
+JA010      IF SPA-MANF-CODE = 'F' OR SPA-MANF-CODE = 'J'
+             IF WS-VINPLATE-UB1 NOT = SPA-P-VINPLATE-UB1
+               IF SPA-P-VINPLATE-UB1-FOUND
+
+                  MOVE '0.6'      TO   WS-FIELD-NO
+                  MOVE '1'        TO   WS-SUB-FIELD
+                  MOVE 'UB'       TO   WS-COUNTRY
+                  MOVE WS-VINPLATE-UB1              TO   WS-COC-VALUE
+                  MOVE SPA-P-VINPLATE-UB1-TIMESTAMP TO WS-TIMESTAMP
+
+                  PERFORM HA720T-UPDATE-VAC-TABLE
+
+                  IF WS-ERROR
+                     MOVE ERROR-ATTR TO TPO-VINUB1-ATTR
+                  ELSE
+                     MOVE WS-VINPLATE-UB1 TO SPA-P-VINPLATE-UB1
+                     MOVE VAC-TIMESTAMP TO SPA-P-VINPLATE-UB1-TIMESTAMP
+                  END-IF
+
+                ELSE
+
+                  MOVE '0.6'           TO   WS-FIELD-NO
+                  MOVE '1'             TO   WS-SUB-FIELD
+                  MOVE WS-VINPLATE-UB1 TO   WS-COC-VALUE
+
+                  PERFORM HA820T-CREATE-VAC-TABLE
+
+                  IF WS-ERROR
+                     MOVE ERROR-ATTR TO TPO-VINUB1-ATTR
+                  ELSE
+                     MOVE WS-VINPLATE-UB1 TO SPA-P-VINPLATE-UB1
+                     MOVE VAC-TIMESTAMP TO SPA-P-VINPLATE-UB1-TIMESTAMP
+                     SET SPA-P-VINPLATE-UB1-FOUND TO TRUE
+                  END-IF
+
+                END-IF
+              END-IF
+
+             IF WS-VINPLATE-UB2 NOT = SPA-P-VINPLATE-UB2
+               IF SPA-P-VINPLATE-UB2-FOUND
+
+                  MOVE '0.6'      TO   WS-FIELD-NO
+                  MOVE '2'        TO   WS-SUB-FIELD
+                  MOVE WS-VINPLATE-UB2              TO   WS-COC-VALUE
+                  MOVE SPA-P-VINPLATE-UB2-TIMESTAMP TO WS-TIMESTAMP
+
+                  PERFORM HA720T-UPDATE-VAC-TABLE
+
+                  IF WS-ERROR
+                     MOVE ERROR-ATTR TO TPO-VINUB2-ATTR
+                  ELSE
+                     MOVE WS-VINPLATE-UB2 TO SPA-P-VINPLATE-UB2
+                     MOVE VAC-TIMESTAMP TO SPA-P-VINPLATE-UB2-TIMESTAMP
+                  END-IF
+
+               ELSE
+
+                  MOVE '0.6'           TO   WS-FIELD-NO
+                  MOVE '2'             TO   WS-SUB-FIELD
+                  MOVE WS-VINPLATE-UB2 TO   WS-COC-VALUE
+
+                  PERFORM HA820T-CREATE-VAC-TABLE
+
+                  IF WS-ERROR
+                     MOVE ERROR-ATTR TO TPO-VINUB2-ATTR
+                  ELSE
+                     MOVE WS-VINPLATE-UB2 TO SPA-P-VINPLATE-UB2
+                     MOVE VAC-TIMESTAMP TO SPA-P-VINPLATE-UB2-TIMESTAMP
+                     SET SPA-P-VINPLATE-UB2-FOUND TO TRUE
+                  END-IF
+
+               END-IF
+             END-IF
+
+             IF WS-VINPLATE-UB3 NOT = SPA-P-VINPLATE-UB3
+               IF SPA-P-VINPLATE-UB3-FOUND
+
+                  MOVE '0.6'      TO   WS-FIELD-NO
+                  MOVE '3'        TO   WS-SUB-FIELD
+                  MOVE WS-VINPLATE-UB3              TO   WS-COC-VALUE
+                  MOVE SPA-P-VINPLATE-UB3-TIMESTAMP TO WS-TIMESTAMP
+
+                  PERFORM HA720T-UPDATE-VAC-TABLE
+
+                  IF WS-ERROR
+                     MOVE ERROR-ATTR TO TPO-VINUB3-ATTR
+                  ELSE
+                     MOVE WS-VINPLATE-UB3 TO SPA-P-VINPLATE-UB3
+                     MOVE VAC-TIMESTAMP TO SPA-P-VINPLATE-UB3-TIMESTAMP
+                  END-IF
+
+               ELSE
+
+                  MOVE '0.6'           TO   WS-FIELD-NO
+                  MOVE '3'             TO   WS-SUB-FIELD
+                  MOVE WS-VINPLATE-UB3 TO   WS-COC-VALUE
+
+                  PERFORM HA820T-CREATE-VAC-TABLE
+
+                  IF WS-ERROR
+                     MOVE ERROR-ATTR TO TPO-VINUB3-ATTR
+                  ELSE
+                     MOVE WS-VINPLATE-UB3 TO SPA-P-VINPLATE-UB3
+                     MOVE VAC-TIMESTAMP TO SPA-P-VINPLATE-UB3-TIMESTAMP
+                     SET SPA-P-VINPLATE-UB3-FOUND TO TRUE
+                  END-IF
+
+               END-IF
+             END-IF
+JA010      END-IF
+
+JA010      IF SPA-MANF-CODE = 'L'
+JA010        IF WS-VINPLATE-UB4 NOT = SPA-P-VINPLATE-UB4
+JA010          IF SPA-P-VINPLATE-UB4-FOUND
+JA010
+JA010             MOVE '0.6'      TO   WS-FIELD-NO
+JA010             MOVE '1'        TO   WS-SUB-FIELD
+JA010             MOVE 'UB'       TO   WS-COUNTRY
+JA010             MOVE WS-VINPLATE-UB4              TO   WS-COC-VALUE
+JA010             MOVE SPA-P-VINPLATE-UB4-TIMESTAMP TO WS-TIMESTAMP
+JA010
+JA010             PERFORM HA720T-UPDATE-VAC-TABLE
+JA010
+JA010             IF WS-ERROR
+JA010                MOVE ERROR-ATTR TO TPO-VINUB4-ATTR
+JA010             ELSE
+JA010                MOVE WS-VINPLATE-UB4 TO SPA-P-VINPLATE-UB4
+JA010                MOVE VAC-TIMESTAMP TO SPA-P-VINPLATE-UB4-TIMESTAMP
+JA010             END-IF
+JA010
+JA010           ELSE
+JA010
+JA010             MOVE '0.6'           TO   WS-FIELD-NO
+JA010             MOVE '1'             TO   WS-SUB-FIELD
+JA010             MOVE WS-VINPLATE-UB4 TO   WS-COC-VALUE
+JA010
+JA010             PERFORM HA820T-CREATE-VAC-TABLE
+JA010
+JA010             IF WS-ERROR
+JA010                MOVE ERROR-ATTR TO TPO-VINUB4-ATTR
+JA010             ELSE
+JA010                MOVE WS-VINPLATE-UB4 TO SPA-P-VINPLATE-UB4
+JA010                MOVE VAC-TIMESTAMP TO SPA-P-VINPLATE-UB4-TIMESTAMP
+JA010                SET SPA-P-VINPLATE-UB4-FOUND TO TRUE
+JA010             END-IF
+JA010
+JA010           END-IF
+JA010         END-IF
+
+             .
+       HA100T-EXIT.
+             EXIT.
+./ ADD NAME=HAZ150T
+      *    CHECK LOCATION OF VINPLATE  FOR C/U
+      *    CHECK LOCATION OF VIN ON CHASSIS CREATE OR UPDATE
+      ****************************************************************
+      *                                                              *
+      *CHECK IF LOC OF VIN      HAS CHANGED THEN UPDATE RECORD       *
+      *                                                              *
+      ****************************************************************
+       HA150T-UPDATE-LOC-OF-VIN-FIELD SECTION.
+
+            IF WS-LOCATION-OF-VIN   NOT = SPA-P-LOCATION-OF-VIN
+
+               MOVE '0.7'      TO   WS-FIELD-NO
+               MOVE '1'        TO   WS-SUB-FIELD
+               MOVE 'UB'       TO   WS-COUNTRY
+               MOVE WS-LOCATION-OF-VIN      TO WS-COC-VALUE
+
+               IF SPA-P-LOC-OF-VIN-FOUND
+
+                  MOVE SPA-P-LOC-OF-VIN-TIMESTAMP TO WS-TIMESTAMP
+                  PERFORM HA700T-UPDATE-COC-TABLE
+
+                  IF WS-ERROR
+                     MOVE ERROR-ATTR TO TPO-LOCOFVIN-ATTR
+                  ELSE
+                     MOVE WS-LOCATION-OF-VIN TO SPA-P-LOCATION-OF-VIN
+                     MOVE COC-TIMESTAMP TO SPA-P-LOC-OF-VIN-TIMESTAMP
+                  END-IF
+
+               ELSE
+
+                  PERFORM HA800T-CREATE-COC-TABLE
+
+                  IF WS-ERROR
+                     MOVE ERROR-ATTR TO TPO-LOCOFVIN-ATTR
+                  ELSE
+                     SET SPA-P-LOC-OF-VIN-FOUND TO TRUE
+                     MOVE WS-LOCATION-OF-VIN TO SPA-P-LOCATION-OF-VIN
+                     MOVE COC-TIMESTAMP TO SPA-P-LOC-OF-VIN-TIMESTAMP
+                  END-IF
+               END-IF
+            END-IF
+
+JA010       IF SPA-MANF-CODE = 'L'
+JA010          IF WS-LOCATION-OF-VIN2  NOT = SPA-P-LOCATION-OF-VIN2
+JA010
+JA010             MOVE '0.7'      TO   WS-FIELD-NO
+JA010             MOVE '2'        TO   WS-SUB-FIELD
+JA010             MOVE 'UB'       TO   WS-COUNTRY
+JA010             MOVE WS-LOCATION-OF-VIN2     TO WS-COC-VALUE
+JA010
+JA010             IF SPA-P-LOC-OF-VIN2-FOUND
+JA010
+JA010                MOVE SPA-P-LOC-OF-VIN2-TIMESTAMP TO WS-TIMESTAMP
+JA010                PERFORM HA700T-UPDATE-COC-TABLE
+JA010
+JA010                IF WS-ERROR
+JA010                   MOVE ERROR-ATTR TO TPO-LOCOFVI2-ATTR
+JA010                ELSE
+JA010                   MOVE WS-LOCATION-OF-VIN2 TO
+JA010                                            SPA-P-LOCATION-OF-VIN2
+JA010                   MOVE COC-TIMESTAMP TO
+JA010                                      SPA-P-LOC-OF-VIN2-TIMESTAMP
+JA010                END-IF
+JA010
+JA010             ELSE
+JA010
+JA010                PERFORM HA800T-CREATE-COC-TABLE
+JA010
+JA010                IF WS-ERROR
+JA010                   MOVE ERROR-ATTR TO TPO-LOCOFVI2-ATTR
+JA010                ELSE
+JA010                   SET SPA-P-LOC-OF-VIN2-FOUND TO TRUE
+JA010                   MOVE WS-LOCATION-OF-VIN2 TO
+JA010                                           SPA-P-LOCATION-OF-VIN2
+JA010                   MOVE COC-TIMESTAMP TO
+JA010                                      SPA-P-LOC-OF-VIN2-TIMESTAMP
+JA010                END-IF
+JA010             END-IF
+JA010          END-IF
+JA010       END-IF
+             .
+       HA150T-EXIT.
+            EXIT.
+
+
+
+
+./ ADD NAME=HAZ200T
+      *    CHECK COM DESC FOR CREATE OR UPDATE
+      ****************************************************************
+      *                                                              *
+      *CHECK IF VOMMERCIAL DESC HAS CHANGED THEN UPDATE RECORD       *
+      *                                                              *
+      ****************************************************************
+       HA200T-UPDATE-COM-DESC-FIELD SECTION.
+
+            IF WS-COMMERCIAL-DESC-UB NOT = SPA-P-COMMERCIAL-DESC-UB
+
+               MOVE '0.2'      TO   WS-FIELD-NO
+               MOVE '2'        TO   WS-SUB-FIELD
+               MOVE 'UB'       TO   WS-COUNTRY
+               MOVE WS-COMMERCIAL-DESC-UB       TO WS-COC-VALUE
+
+               IF SPA-P-COM-DESC-UB-FOUND
+
+                  MOVE SPA-P-COM-DESC-UB-TIMESTAMP TO WS-TIMESTAMP
+                  PERFORM HA700T-UPDATE-COC-TABLE
+
+                  IF WS-ERROR
+                     MOVE ERROR-ATTR TO TPO-COMDESUB-ATTR
+                  ELSE
+                     MOVE WS-COMMERCIAL-DESC-UB TO
+                                              SPA-P-COMMERCIAL-DESC-UB
+                     MOVE COC-TIMESTAMP TO SPA-P-COM-DESC-UB-TIMESTAMP
+                  END-IF
+
+             ELSE
+
+                PERFORM HA800T-CREATE-COC-TABLE
+
+                IF WS-ERROR
+                   MOVE ERROR-ATTR TO TPO-COMDESUB-ATTR
+                ELSE
+                   SET SPA-P-COM-DESC-UB-FOUND TO TRUE
+                   MOVE WS-COMMERCIAL-DESC-UB TO
+                                            SPA-P-COMMERCIAL-DESC-UB
+                   MOVE COC-TIMESTAMP TO SPA-P-COM-DESC-UB-TIMESTAMP
+                END-IF
+             END-IF
+
+             .
+       HA200T-EXIT.
+            EXIT.
+
+
+
+
+./ ADD NAME=HAZ300I
+      *    CONVERT DATE YYYY-MM-DD TO DD/MM/YYYY
+
+      ****************************************************************
+      *                                                              *
+      * CONVERT DATE FROM YYYY-MM-DD TO DD/MM/YYYY                   *
+      *                                                              *
+      ****************************************************************
+       Z300I-CONVERT-DATE SECTION.
+
+
+             MOVE WS-DATE-IN-YYYY TO WS-DATE-CON-YYYY
+             MOVE WS-DATE-IN-MM   TO WS-DATE-CON-MM
+             MOVE WS-DATE-IN-DD   TO WS-DATE-CON-DD
+             .
+       Z300I-EXIT.
+             EXIT.
+
+./ ADD NAME=HAZ300T
+      *    CHECK REMARKS FOR CREATE OR UPDATE
+      *    UPDATE VAC FIELD
+
+      ****************************************************************
+      *                                                              *
+      *  CHECK EACH FIELD TO SEE IF IT HAS CHANGED. IF IT HAS CHANGED*
+      *  CALL HA720T-UPDATE-VAC-TABLE SECTION ON RETURN FROM HA720T  *
+      *  CHECK TO SEE IF AN ERROR HAS OCCURED.                       *
+      *                                                              *
+      ****************************************************************
+
+       HA300T-UPDATE-REMARKS-FIELD SECTION.
+
+
+             IF WS-REMARKS-UB1 NOT = SPA-P-REMARKS-UB1
+
+                MOVE '38'       TO   WS-FIELD-NO
+                MOVE '05'       TO   WS-SUB-FIELD
+                MOVE WS-REMARKS-UB1              TO WS-COC-VALUE
+
+                IF SPA-P-REMARKS-UB1-FOUND
+
+                   MOVE SPA-P-REMARKS-UB1-TIMESTAMP TO WS-TIMESTAMP
+
+                   IF WS-REMARKS-UB1 = SPACE
+                      PERFORM HA920T-DELETE-VAC-TABLE
+                   ELSE
+                      PERFORM HA720T-UPDATE-VAC-TABLE
+                   END-IF
+
+                   IF WS-ERROR
+                      MOVE ERROR-ATTR TO TPO-REMUB1-ATTR
+                   ELSE
+                      MOVE WS-REMARKS-UB1 TO   SPA-P-REMARKS-UB1
+                      MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB1-TIMESTAMP
+                   END-IF
+
+                ELSE
+
+                   PERFORM HA820T-CREATE-VAC-TABLE
+
+                   IF WS-ERROR
+                      MOVE ERROR-ATTR TO TPO-REMUB1-ATTR
+                   ELSE
+                      SET SPA-P-REMARKS-UB1-FOUND TO TRUE
+                      MOVE WS-REMARKS-UB1 TO   SPA-P-REMARKS-UB1
+                      MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB1-TIMESTAMP
+                   END-IF
+                END-IF
+
+             END-IF
+
+
+             IF WS-REMARKS-UB2 NOT = SPA-P-REMARKS-UB2
+
+                MOVE '38'       TO   WS-FIELD-NO
+                MOVE '06'       TO   WS-SUB-FIELD
+                MOVE WS-REMARKS-UB2              TO WS-COC-VALUE
+
+                IF SPA-P-REMARKS-UB2-FOUND
+
+                   MOVE SPA-P-REMARKS-UB2-TIMESTAMP TO WS-TIMESTAMP
+
+                   IF WS-REMARKS-UB2 = SPACE
+                      PERFORM HA920T-DELETE-VAC-TABLE
+                   ELSE
+                      PERFORM HA720T-UPDATE-VAC-TABLE
+                   END-IF
+
+                   IF WS-ERROR
+                      MOVE ERROR-ATTR TO TPO-REMUB2-ATTR
+                   ELSE
+                      MOVE WS-REMARKS-UB2 TO   SPA-P-REMARKS-UB2
+                      MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB2-TIMESTAMP
+                   END-IF
+
+                ELSE
+
+                   PERFORM HA820T-CREATE-VAC-TABLE
+
+                   IF WS-ERROR
+                      MOVE ERROR-ATTR TO TPO-REMUB2-ATTR
+                   ELSE
+                      SET SPA-P-REMARKS-UB2-FOUND TO TRUE
+                      MOVE WS-REMARKS-UB2 TO   SPA-P-REMARKS-UB2
+                      MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB2-TIMESTAMP
+                   END-IF
+                END-IF
+
+             END-IF
+
+             IF WS-REMARKS-UB3 NOT = SPA-P-REMARKS-UB3
+
+                MOVE '38'       TO   WS-FIELD-NO
+                MOVE '07'       TO   WS-SUB-FIELD
+                MOVE WS-REMARKS-UB3              TO WS-COC-VALUE
+
+                IF SPA-P-REMARKS-UB3-FOUND
+
+                   MOVE SPA-P-REMARKS-UB3-TIMESTAMP TO WS-TIMESTAMP
+
+                   IF WS-REMARKS-UB3 = SPACE
+                      PERFORM HA920T-DELETE-VAC-TABLE
+                   ELSE
+                      PERFORM HA720T-UPDATE-VAC-TABLE
+                   END-IF
+
+                   IF WS-ERROR
+                      MOVE ERROR-ATTR TO TPO-REMUB3-ATTR
+                   ELSE
+                      MOVE WS-REMARKS-UB3 TO   SPA-P-REMARKS-UB3
+                      MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB3-TIMESTAMP
+                   END-IF
+
+                ELSE
+
+                   PERFORM HA820T-CREATE-VAC-TABLE
+
+                   IF WS-ERROR
+                      MOVE ERROR-ATTR TO TPO-REMUB3-ATTR
+                   ELSE
+                      SET SPA-P-REMARKS-UB3-FOUND TO TRUE
+                      MOVE WS-REMARKS-UB3 TO   SPA-P-REMARKS-UB3
+                      MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB3-TIMESTAMP
+                   END-IF
+                END-IF
+
+             END-IF
+
+             IF WS-REMARKS-UB4 NOT = SPA-P-REMARKS-UB4
+
+                MOVE '38'       TO   WS-FIELD-NO
+                MOVE '08'       TO   WS-SUB-FIELD
+                MOVE WS-REMARKS-UB4              TO WS-COC-VALUE
+
+                IF SPA-P-REMARKS-UB4-FOUND
+
+                   MOVE SPA-P-REMARKS-UB4-TIMESTAMP TO WS-TIMESTAMP
+
+                   IF WS-REMARKS-UB4 = SPACE
+                      PERFORM HA920T-DELETE-VAC-TABLE
+                   ELSE
+                      PERFORM HA720T-UPDATE-VAC-TABLE
+                   END-IF
+
+                   IF WS-ERROR
+                      MOVE ERROR-ATTR TO TPO-REMUB4-ATTR
+                   ELSE
+                      MOVE WS-REMARKS-UB4 TO   SPA-P-REMARKS-UB4
+                      MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB4-TIMESTAMP
+                   END-IF
+
+                ELSE
+
+                   PERFORM HA820T-CREATE-VAC-TABLE
+
+                   IF WS-ERROR
+                      MOVE ERROR-ATTR TO TPO-REMUB4-ATTR
+                   ELSE
+                      SET SPA-P-REMARKS-UB4-FOUND TO TRUE
+                      MOVE WS-REMARKS-UB4 TO   SPA-P-REMARKS-UB4
+                      MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB4-TIMESTAMP
+                   END-IF
+                END-IF
+
+             END-IF
+
+             IF WS-REMARKS-UB5 NOT = SPA-P-REMARKS-UB5
+
+                MOVE '38'       TO   WS-FIELD-NO
+                MOVE '09'       TO   WS-SUB-FIELD
+                MOVE WS-REMARKS-UB5              TO WS-COC-VALUE
+
+                IF SPA-P-REMARKS-UB5-FOUND
+
+                   MOVE SPA-P-REMARKS-UB5-TIMESTAMP TO WS-TIMESTAMP
+
+                   IF WS-REMARKS-UB5 = SPACE
+                      PERFORM HA920T-DELETE-VAC-TABLE
+                   ELSE
+                      PERFORM HA720T-UPDATE-VAC-TABLE
+                   END-IF
+
+                   IF WS-ERROR
+                      MOVE ERROR-ATTR TO TPO-REMUB5-ATTR
+                   ELSE
+                      MOVE WS-REMARKS-UB5 TO   SPA-P-REMARKS-UB5
+                      MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB5-TIMESTAMP
+                   END-IF
+
+                ELSE
+
+                   PERFORM HA820T-CREATE-VAC-TABLE
+
+                   IF WS-ERROR
+                      MOVE ERROR-ATTR TO TPO-REMUB5-ATTR
+                   ELSE
+                      SET SPA-P-REMARKS-UB5-FOUND TO TRUE
+                      MOVE WS-REMARKS-UB5 TO   SPA-P-REMARKS-UB5
+                      MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB5-TIMESTAMP
+                   END-IF
+                END-IF
+
+             END-IF.
+
+       HA300T-EXIT.
+             EXIT.
+
+./ ADD NAME=HAZ400I
+      *    POPULATE REMARKS FIELDS
+
+      ****************************************************************
+      *                                                              *
+      *  POPULATE REMARK FIELDS                                      *
+      *                                                              *
+      ****************************************************************
+
+       Z400I-POPULATE-REMARK-FIELD  SECTION.
+
+
+              IF VAC-SUB-FIELD = '05'
+                    MOVE VAC-VALUE TO WS-REMARKS-UB1
+                                      SPA-P-REMARKS-UB1
+                    MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB1-TIMESTAMP
+                    SET SPA-P-REMARKS-UB1-FOUND TO TRUE
+              END-IF
+
+              IF VAC-SUB-FIELD = '06'
+                    MOVE VAC-VALUE TO WS-REMARKS-UB2
+                                      SPA-P-REMARKS-UB2
+                    MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB2-TIMESTAMP
+                    SET SPA-P-REMARKS-UB2-FOUND TO TRUE
+              END-IF
+
+              IF VAC-SUB-FIELD = '07'
+                    MOVE VAC-VALUE TO WS-REMARKS-UB3
+                                      SPA-P-REMARKS-UB3
+                    MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB3-TIMESTAMP
+                    SET SPA-P-REMARKS-UB3-FOUND TO TRUE
+              END-IF
+
+              IF VAC-SUB-FIELD = '08'
+                    MOVE VAC-VALUE TO WS-REMARKS-UB4
+                                      SPA-P-REMARKS-UB4
+                    MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB4-TIMESTAMP
+                    SET SPA-P-REMARKS-UB4-FOUND TO TRUE
+              END-IF
+
+              IF VAC-SUB-FIELD = '09'
+                    MOVE VAC-VALUE TO WS-REMARKS-UB5
+                                      SPA-P-REMARKS-UB5
+                    MOVE VAC-TIMESTAMP TO SPA-P-REMARKS-UB5-TIMESTAMP
+                    SET SPA-P-REMARKS-UB5-FOUND TO TRUE
+              END-IF
+
+              .
+       Z400I-EXIT.
+              EXIT.
+./ ADD NAME=HAZ600T
+      *    AUDIT TRAIL CALL
+
+      ****************************************************************
+      *                                                              *
+      *   CALL TO AUDIT TRAIL                                        *
+      *                                                              *
+      ****************************************************************
+
+       HA600T-AUDIT-TRAIL SECTION.
+
+
+             CALL 'HAIMALOG' USING  WS-TABLE-NAME
+                                    WS-B4-IMAGE
+                                    WS-AFT-IMAGE
+                                    WS-LENGTH-B4IMAGE
+                                    WS-LENGTH-AFTIMAGE
+                                    WS-DB2-STATUS.
+
+             IF WS-DB2-STATUS NOT = 0
+
+                MOVE WS-DB2-STATUS  TO ABT-DB2-STATUS
+                MOVE 'INSERT'       TO ABT-DA-FUNCTION
+                MOVE 'DB2'          TO ABT-ERROR-ACTIVITY
+                MOVE 'HAIMALOG'     TO ABT-DA-ACCESS-NAME
+                CALL 'ADMAAB0'
+                PERFORM Z-980-ABNORMAL-TERM
+
+             END-IF.
+
+       HA600T-AUDIT-TRAIL-EXIT.
+             EXIT.
+
+./ ADD NAME=HAZ700T
+      *    CHECK AND UPDATE COC TABLE VALUES
+
+      *****************************************************************
+      *                                                               *
+      * COMMON ROUTINE TO CHECK THE COC FIELD HAS NOT BEEN UPDATED    *
+      * SINCE THE SCREEN WAS DISPLAYED AND THEN UPDATE THE FIELD VALUE*
+      *****************************************************************
+
+       HA700T-UPDATE-COC-TABLE  SECTION.
+
+
+                MOVE SPACES TO WS-ERROR-INDICATOR
+
+                PERFORM U-100-READNXT3-HATCOC
+
+                IF DA-NOTFOUND
+
+                    MOVE WS-E050-ERROR-MSG TO TPO-ERRMSG1
+                    SET WS-ERROR    TO TRUE
+                    SET DO-WRITE    TO TRUE
+
+                ELSE
+
+                    MOVE HATCOC TO WS-B4-IMAGE
+                    MOVE WS-COC-VALUE  TO COC-VALUE
+                    MOVE SPA-USER-ID TO COC-USERID
+
+                    COPY HATIMEST.
+                    MOVE WS-TIME-STAMP TO COC-TIMESTAMP
+                    MOVE HATCOC TO WS-AFT-IMAGE
+
+                    PERFORM U-100-UPDATE-HATCOC
+
+                    SET SPA-UPDATE-SUCCESSFUL TO TRUE
+
+                    MOVE LENGTH OF HATCOC TO WS-LENGTH-B4IMAGE
+                                             WS-LENGTH-AFTIMAGE
+                    MOVE 'HATCOC' TO WS-TABLE-NAME
+
+                    PERFORM HA600T-AUDIT-TRAIL
+                END-IF
+
+                PERFORM U-100-READNXT3-HATCOC-CLOSE
+                .
+       HA700T-EXIT.
+             EXIT.
+
+
+./ ADD NAME=HAZ720T
+      *    CHECK AND UPDATE VAC TABLE VALUES
+
+      *****************************************************************
+      *                                                               *
+      * COMMON ROUTINE TO CHECK THE VAC FIELD HAS NOT BEEN UPDATED    *
+      * SINCE THE SCREEN WAS DISPLAYED AND THEN UPDATE THE FIELD VALUE*
+      *****************************************************************
+
+       HA720T-UPDATE-VAC-TABLE  SECTION.
+
+
+                MOVE SPACES TO WS-ERROR-INDICATOR
+
+                PERFORM U-100-READNXT3-HATVAC
+
+                IF DA-NOTFOUND
+
+                    MOVE WS-E050-ERROR-MSG TO TPO-ERRMSG1
+                    SET WS-ERROR    TO TRUE
+                    SET DO-WRITE    TO TRUE
+
+                ELSE
+
+                    MOVE HATVAC TO WS-B4-IMAGE
+                    MOVE WS-COC-VALUE  TO VAC-VALUE
+                    MOVE SPA-USER-ID TO VAC-USERID
+
+                    COPY HATIMEST.
+                    MOVE WS-TIME-STAMP TO VAC-TIMESTAMP
+                    MOVE HATVAC TO WS-AFT-IMAGE
+
+                    PERFORM U-100-UPDATE-HATVAC
+
+                    SET SPA-UPDATE-SUCCESSFUL TO TRUE
+
+                    MOVE LENGTH OF HATVAC TO WS-LENGTH-B4IMAGE
+                                             WS-LENGTH-AFTIMAGE
+                    MOVE 'HATVAC' TO WS-TABLE-NAME
+
+                    PERFORM HA600T-AUDIT-TRAIL
+                END-IF
+
+                PERFORM U-100-READNXT3-HATVAC-CLOSE
+                .
+       HA720T-EXIT.
+             EXIT.
+
+
+./ ADD NAME=HAZ800T
+      *    CREATE HATCOC TABLE VALUES
+      *    CRETE HATCOC TABLE VALUES
+      *    CHECK AND UPDATE COC TABLE VALUES
+
+      *****************************************************************
+      *                                                               *
+      * COMMON ROUTINE TO CHECK THE COC FIELD HAS NOT BEEN UPDATED    *
+      * SINCE THE SCREEN WAS DISPLAYED AND THEN UPDATE THE FIELD VALUE*
+      *****************************************************************
+
+       HA800T-CREATE-COC-TABLE  SECTION.
+
+
+                MOVE SPACES TO WS-ERROR-INDICATOR
+
+                PERFORM U-100-READ-HATCOC
+
+                IF DA-OK
+
+                    MOVE WS-E050-ERROR-MSG TO TPO-ERRMSG1
+                    SET WS-ERROR    TO TRUE
+                    SET DO-WRITE    TO TRUE
+
+                ELSE
+
+                    MOVE SPA-MODEL TO COC-MODEL
+                    MOVE SPA-MANF-CODE TO COC-MANF
+                    MOVE SPA-TYPE  TO COC-TYPE
+                    MOVE WS-SDATE-DB2 TO COC-START-DATE
+                    MOVE WS-EDATE-DB2 TO COC-END-DATE
+                    MOVE WS-FIELD-NO  TO COC-FIELD-NO
+                    MOVE WS-SUB-FIELD TO COC-SUB-FIELD
+                    MOVE WS-COC-VALUE TO COC-VALUE
+                    MOVE WS-COUNTRY   TO COC-COUNTRY
+                    MOVE SPA-USER-ID TO COC-USERID
+
+                    COPY HATIMEST.
+                    MOVE WS-TIME-STAMP TO COC-TIMESTAMP
+
+                    MOVE SPACES TO WS-B4-IMAGE
+                    MOVE HATCOC TO WS-AFT-IMAGE
+
+                    PERFORM U-100-CREATE-HATCOC
+
+                    SET SPA-UPDATE-SUCCESSFUL TO TRUE
+
+                    MOVE LENGTH OF HATCOC TO WS-LENGTH-B4IMAGE
+                                             WS-LENGTH-AFTIMAGE
+                    MOVE 'HATCOC' TO WS-TABLE-NAME
+
+                    PERFORM HA600T-AUDIT-TRAIL
+                END-IF
+
+                .
+       HA700T-EXIT.
+             EXIT.
+
+
+./ ADD NAME=HAZ820T
+      *    CREATE HATVAC TABLE ROWS
+
+      *****************************************************************
+      *                                                               *
+      * COMMON ROUTINE TO CHECK THE VAC FIELD HAS NOT BEEN UPDATED    *
+      * SINCE THE SCREEN WAS DISPLAYED AND THEN UPDATE THE FIELD VALUE*
+      *****************************************************************
+
+       HA820T-CREATE-VAC-TABLE  SECTION.
+
+
+                MOVE SPACES TO WS-ERROR-INDICATOR
+
+                PERFORM U-100-READ-HATVAC
+
+                IF DA-OK
+
+                    MOVE WS-E050-ERROR-MSG TO TPO-ERRMSG1
+                    SET WS-ERROR    TO TRUE
+                    SET DO-WRITE    TO TRUE
+
+                ELSE
+
+                    MOVE SPA-MODEL TO VAC-MODEL
+                    MOVE SPA-MANF-CODE TO VAC-MANF
+                    MOVE SPA-TYPE  TO VAC-TYPE
+                    MOVE WS-SDATE-DB2 TO VAC-START-DATE
+                    MOVE WS-EDATE-DB2 TO VAC-END-DATE
+                    MOVE WS-FIELD-NO  TO VAC-FIELD-NO
+                    MOVE WS-SUB-FIELD TO VAC-SUB-FIELD
+                    MOVE WS-COC-VALUE TO VAC-VALUE
+                    MOVE SPA-USER-ID TO VAC-USERID
+                    MOVE SPA-VARIANT TO VAC-VARIANT
+
+                    COPY HATIMEST.
+                    MOVE WS-TIME-STAMP TO VAC-TIMESTAMP
+
+                    MOVE SPACES TO WS-B4-IMAGE
+                    MOVE HATVAC TO WS-AFT-IMAGE
+
+                    PERFORM U-100-CREATE-HATVAC
+
+                    SET SPA-UPDATE-SUCCESSFUL TO TRUE
+
+                    MOVE LENGTH OF HATVAC TO WS-LENGTH-B4IMAGE
+                                             WS-LENGTH-AFTIMAGE
+                    MOVE 'HATVAC' TO WS-TABLE-NAME
+
+                    PERFORM HA600T-AUDIT-TRAIL
+                END-IF
+
+                .
+       HA820T-EXIT.
+             EXIT.
+
+
+./ ADD NAME=HAZ900T
+      *    DELETE HATCOC TABLE VALUES
+      *    CHECK AND DELETE COC TABLE VALUES
+
+      *****************************************************************
+      *                                                               *
+      * COMMON ROUTINE TO CHECK THE COC FIELD HAS NOT BEEN DELETED    *
+      * SINCE THE SCREEN WAS DISPLAYED AND THEN DELETE THE FIELD VALUE*
+      *****************************************************************
+
+       HA900T-DELETE-COC-TABLE  SECTION.
+
+
+                MOVE SPACES TO WS-ERROR-INDICATOR
+
+                PERFORM U-100-READNXT3-HATCOC
+
+                IF DA-NOTFOUND
+
+                    MOVE WS-E050-ERROR-MSG TO TPO-ERRMSG1
+                    SET WS-ERROR    TO TRUE
+                    SET DO-WRITE    TO TRUE
+
+                ELSE
+
+                    MOVE HATCOC TO WS-B4-IMAGE
+                    MOVE WS-COC-VALUE  TO COC-VALUE
+                    MOVE SPA-USER-ID TO COC-USERID
+
+                    COPY HATIMEST.
+                    MOVE WS-TIME-STAMP TO COC-TIMESTAMP
+                    MOVE HATCOC TO WS-AFT-IMAGE
+
+                    PERFORM U-100-DELETE-HATCOC
+
+                    SET SPA-UPDATE-SUCCESSFUL TO TRUE
+
+                    MOVE LENGTH OF HATCOC TO WS-LENGTH-B4IMAGE
+                                             WS-LENGTH-AFTIMAGE
+                    MOVE 'HATCOC' TO WS-TABLE-NAME
+
+                    PERFORM HA600T-AUDIT-TRAIL
+                END-IF
+
+                PERFORM U-100-READNXT3-HATCOC-CLOSE
+                .
+       HA700T-EXIT.
+             EXIT.
+
+
+./ ADD NAME=HAZ920T
+      *    DELETE HATVAC TABLE ROWS
+
+      *****************************************************************
+      *                                                               *
+      * COMMON ROUTINE TO CHECK THE VAC FIELD HAS NOT BEEN DELETED    *
+      * SINCE THE SCREEN WAS DISPLAYED AND THEN DELETE THE FIELD VALUE*
+      *****************************************************************
+
+       HA920T-DELETE-VAC-TABLE  SECTION.
+
+
+                MOVE SPACES TO WS-ERROR-INDICATOR
+
+                PERFORM U-100-READNXT3-HATVAC
+
+                IF DA-NOTFOUND
+
+                    MOVE WS-E050-ERROR-MSG TO TPO-ERRMSG1
+                    SET WS-ERROR    TO TRUE
+                    SET DO-WRITE    TO TRUE
+
+                ELSE
+
+                    MOVE HATVAC TO WS-B4-IMAGE
+                    MOVE WS-COC-VALUE  TO COC-VALUE
+                    MOVE SPA-USER-ID TO VAC-USERID
+
+                    COPY HATIMEST.
+                    MOVE WS-TIME-STAMP TO VAC-TIMESTAMP
+                    MOVE HATVAC TO WS-AFT-IMAGE
+
+                    PERFORM U-100-DELETE-HATVAC
+
+                    SET SPA-UPDATE-SUCCESSFUL TO TRUE
+
+                    MOVE LENGTH OF HATVAC TO WS-LENGTH-B4IMAGE
+                                             WS-LENGTH-AFTIMAGE
+                    MOVE 'HATVAC' TO WS-TABLE-NAME
+
+                    PERFORM HA600T-AUDIT-TRAIL
+                END-IF
+
+                PERFORM U-100-READNXT3-HATVAC-CLOSE
+                .
+       HA920T-EXIT.
+             EXIT.
+
+
+./ ADD NAME=ININIT1
+
+      ****************************************************************
+      *                                                              *
+      *  INITIALIZE DATE WORKING STORAGE FIELDS                      *
+      *                                                              *
+      ****************************************************************
+
+            MOVE SPA-SDATE TO WS-SDATE-DB2
+
+            MOVE SPACES TO SPA-UPDATE-MARKER.
+./ ADD NAME=INTERM
+
+      ****************************************************************
+      *                                                              *
+      *  UPDATE TABLE IF ANY FIELDS HAVE BEEN UPDATED                *
+      *                                                              *
+      ****************************************************************
+
+               PERFORM HA100T-UPDATE-VINPLATE-FIELD
+               PERFORM HA150T-UPDATE-LOC-OF-VIN-FIELD
+               PERFORM HA200T-UPDATE-COM-DESC-FIELD
+               PERFORM HA300T-UPDATE-REMARKS-FIELD
+
+
+               IF DO-WRITE
+                  GO TO H-100-INPUT-TERM-RETURN
+               END-IF
+
+
+               .
+
+
+./ ADD NAME=OINIT1
+    * *  POPULATE SCREEN FIELDS
+
+      ****************************************************************
+      *                                                              *
+      * INTIALIZE VARAIABLES                                         *
+      *                                                              *
+      ****************************************************************
+
+           INITIALIZE SPA-P-HA03R-AREA
+           INITIALIZE WS-FIELD-DEFINITION
+
+      ****************************************************************
+      *                                                              *
+      *  IF PREVIOUS SCREEN UPDATE OK DISPLAY I001 MESSAGE           *
+      *                                                              *
+      ****************************************************************
+
+
+           IF SPA-UPDATE-SUCCESSFUL
+               MOVE WS-I001-ERROR-MSG TO TPO-ERRMSG1
+               MOVE SPACES TO SPA-UPDATE-MARKER
+           END-IF
+
+      ****************************************************************
+      *                                                              *
+      *    POPULATE SCREEN VARIABLES                                 *
+      *                                                              *
+      ****************************************************************
+           MOVE SPA-SDATE TO WS-SDATE-DB2
+
+      ****************************************************************
+      *                                                              *
+      * READ TABLES TO OBTAIN SCREEN DETAILS                         *
+      *                                                              *
+      ****************************************************************
+
+      **** READ HATCOC FOR COMMERCIAL DESCRIPTION
+
+           PERFORM U-100-READNXT1-HATCOC
+
+           IF DA-NOTFOUND
+              MOVE WS-E014-ERROR-MSG TO TPO-ERRMSG1
+           END-IF
+
+           PERFORM UNTIL HATCOC-STATUS = +100
+
+              IF COC-FIELD-NO = '0.2'
+                 IF COC-SUB-FIELD = '2'
+                    IF COC-COUNTRY = 'UB'
+                       MOVE COC-VALUE     TO WS-COMMERCIAL-DESC-UB
+                                             SPA-P-COMMERCIAL-DESC-UB
+                       MOVE COC-TIMESTAMP TO SPA-P-COM-DESC-UB-TIMESTAMP
+                       SET SPA-P-COM-DESC-UB-FOUND TO TRUE
+                    END-IF
+                 END-IF
+              END-IF
+
+              IF COC-FIELD-NO = '0.7'
+JA010            IF COC-SUB-FIELD = '1'
+                    MOVE COC-VALUE     TO WS-LOCATION-OF-VIN
+                                          SPA-P-LOCATION-OF-VIN
+                    MOVE COC-TIMESTAMP TO SPA-P-LOC-OF-VIN-TIMESTAMP
+                    SET SPA-P-LOC-OF-VIN-FOUND TO TRUE
+JA010            END-IF
+JA010            IF SPA-MANF-CODE = 'L'
+JA010               IF COC-SUB-FIELD = '2'
+JA010                  MOVE COC-VALUE     TO WS-LOCATION-OF-VIN2
+JA010                                        SPA-P-LOCATION-OF-VIN2
+JA010                  MOVE COC-TIMESTAMP TO SPA-P-LOC-OF-VIN2-TIMESTAMP
+JA010                  SET SPA-P-LOC-OF-VIN2-FOUND TO TRUE
+JA010               END-IF
+JA010            END-IF
+JA010         END-IF
+
+              PERFORM U-100-READNXT1-HATCOC
+
+           END-PERFORM
+
+      **** READ HATVAC FOR REMARKS AND VIN LOCATIONS
+
+           PERFORM U-100-READNXT1-HATVAC
+
+           IF DA-NOTFOUND
+              MOVE WS-E161-ERROR-MSG TO TPO-ERRMSG1
+           END-IF
+
+           PERFORM UNTIL HATVAC-STATUS = +100
+
+              IF VAC-FIELD-NO = '0.6'
+JA010            IF SPA-MANF-CODE = 'F' OR SPA-MANF-CODE = 'J'
+                    IF VAC-SUB-FIELD = '1'
+                         MOVE VAC-VALUE     TO WS-VINPLATE-UB1
+                                               SPA-P-VINPLATE-UB1
+                         MOVE VAC-TIMESTAMP TO
+                                 SPA-P-VINPLATE-UB1-TIMESTAMP
+                         SET SPA-P-VINPLATE-UB1-FOUND TO TRUE
+                    END-IF
+                    IF VAC-SUB-FIELD = '2'
+                         MOVE VAC-VALUE     TO WS-VINPLATE-UB2
+                                               SPA-P-VINPLATE-UB2
+                         MOVE VAC-TIMESTAMP TO
+                                 SPA-P-VINPLATE-UB2-TIMESTAMP
+                         SET SPA-P-VINPLATE-UB2-FOUND TO TRUE
+                    END-IF
+                    IF VAC-SUB-FIELD = '3'
+                         MOVE VAC-VALUE     TO WS-VINPLATE-UB3
+                                               SPA-P-VINPLATE-UB3
+                         MOVE VAC-TIMESTAMP TO
+                                 SPA-P-VINPLATE-UB3-TIMESTAMP
+                         SET SPA-P-VINPLATE-UB3-FOUND TO TRUE
+                    END-IF
+JA010            END-IF
+JA010            IF SPA-MANF-CODE = 'L'
+JA010               IF VAC-SUB-FIELD = '1'
+JA010                    MOVE VAC-VALUE     TO WS-VINPLATE-UB4
+JA010                                          SPA-P-VINPLATE-UB4
+JA010                    MOVE VAC-TIMESTAMP TO
+JA010                            SPA-P-VINPLATE-UB4-TIMESTAMP
+JA010                    SET SPA-P-VINPLATE-UB4-FOUND TO TRUE
+JA010               END-IF
+JA010            END-IF
+              END-IF
+
+              IF VAC-FIELD-NO = '38'
+                 PERFORM Z400I-POPULATE-REMARK-FIELD
+              END-IF
+
+              PERFORM U-100-READNXT1-HATVAC
+
+           END-PERFORM
+
+./ ADD NAME=OUTTERM
+
+      ****************************************************************
+      *                                                              *
+      *     PROTECT CHIP DATA                                        *
+      *                                                              *
+      ****************************************************************
+
+             IF SPA-CHIP-DATA = 'Y'
+                MOVE PROT-ATTR TO  TPO-VINUB1-ATTR
+                                   TPO-VINUB2-ATTR
+                                   TPO-VINUB3-ATTR
+                                   TPO-LOCOFVIN-ATTR
+                                   TPO-COMDESUB-ATTR
+                                   TPO-REMUB1-ATTR
+                                   TPO-REMUB2-ATTR
+                                   TPO-REMUB3-ATTR
+                                   TPO-REMUB4-ATTR
+                                   TPO-REMUB5-ATTR
+
+
+
+                MOVE NEUTRAL-ATTR TO TPO-VINUB1-C-ATTR
+                                     TPO-VINUB2-C-ATTR
+                                     TPO-VINUB3-C-ATTR
+                                     TPO-LOCOFVIN-C-ATTR
+                                     TPO-COMDESUB-C-ATTR
+                                     TPO-REMUB1-C-ATTR
+                                     TPO-REMUB2-C-ATTR
+                                     TPO-REMUB3-C-ATTR
+                                     TPO-REMUB4-C-ATTR
+                                     TPO-REMUB5-C-ATTR
+              END-IF.
+JA010 ***************************************************************
+JA010 *BLANK   LOCATION OF VIN PLATE VALUE  ON LINE 10 FOR FORD/JAG *
+JA010 ***************************************************************
+JA010       IF SPA-MANF-CODE = 'F' OR SPA-MANF-CODE = 'J'
+JA010          MOVE OUTPUT-BLANK-ATTR TO TPO-VINUB4-ATTR
+JA010          MOVE OUTPUT-BLANK-ATTR TO TPO-LOCOFVI2-ATTR
+JA010       END-IF
+JA010 ***************************************************************
+JA010 *BLANK   LOCATION OF VIN PLATE VALUES ON LINE 9 FOR LAND ROVER*
+JA010 ***************************************************************
+JA010       IF SPA-MANF-CODE = 'L'
+JA010          MOVE OUTPUT-BLANK-ATTR TO TPO-VINUB1-ATTR
+JA010                                    TPO-VINUB2-ATTR
+JA010                                    TPO-VINUB3-ATTR
+JA010          MOVE CURSOR-ATTR       TO TPO-VINUB4-ATTR
+JA010       END-IF.
+./ ADD NAME=REMARKS
+      ****************************************************************
+      *                                                              *
+      * THIS PROGRAM ENABLES THE USER TO RECORD THE INFORAMTION FOR  *
+      * THE COC THAT IS FIXED BY TYPE / VARIANT                      *
+      *                                                              *
+      *                                                              *
+      * COPY BOOKS USED                                              *
+      *                                                              *
+      *   HASPA001 : SPA COPY CODE CONTAINING PROJECT WIDE VARIABLES *
+      *   HATIMEST : COPY BOOK TO OBTAIN TIMESTAMP FOR UPDATES       *
+      *                                                              *
+      *                                                              *
+      * DATE 05/09/1994                               VERSION 01     *
+      * AUTHOR P NASH                                                *
+      * CHANGE NOTIFICATION : INITIAL VERSION                        *
+      * VERS NO  WHO  DATE     DESCRIPTION OF CHANGE                 *
+      *   02     KJG  17/03    OR50/CR12 APPROVAL PROCESSING         *
+      *                        REMOVE DATES AS OPTIONAL KEYS         *
+      *   03     PN   20/04    OR62 1 LANGUAGE REQUIRED (UB)         *
+      *                        INCREASE SIZE & NO. OF REMARKS FIELD  *
+      *   04     PN   26/10    OR 36 MOVE COC FIRLD S TO HATVAR      *
+      *                        ALSO MAKE 3U 3R 3D LOOK SAME SO THAT  *
+      *                        PF6 PF7 PF8 CAN BE USED               *
+      *   04     PN   11/01    OR 10 ADD HELP SYSTEM                 *
+      *                                                              *
+      *   05     PN   27/02    OR 155 ADD MANUFACTURER TO DB2 CALLS  *
+      *                                                              *
+      *   06     PL   18/6/96  RELEASE 5 CHANGE THE WIDTH OF THE     *
+      *                        FIELDS, TYPE AND VARIANT.             *
+      *                                                              *
+      *   07     DAB  16/1/97  VIN LOCATION AND REMARKS NOW HELD ON  *
+      *                        NEW HAT_VAC_VARIANT TABLE.            *
+      *                                                              *
+      *   08     DAB 01/09/97  OR 218 REMOVE CREATIO DATE FROM       *
+      *                        SCREEN.                               *
+      *                                                              *
+      *   09     PN  08/09/99  ADD LOCATION OF VIN ON CHASSIS        *
+      *                                                              *
+      * Y2K COMPLIANCE CHECKED/OK - 15/01/1998 DAVE BUXTON           *
+      *                                                              *
+      *   10     JA  10/04/06  TD767 - LAND ROVER                    *
+      *                                                              *
+      ****************************************************************
+
+
+./ ADD NAME=R1HATCOC
+      *    KEY FOR READNXT1 OF HATCOC TABLE
+      *    KET FOR READNXT1 OF HATCOC TABLE
+
+      ****************************************************************
+      *                                                              *
+      * KEY FOR READNEXT OF HATCOC TABLE                             *
+      *                                                              *
+      ****************************************************************
+
+              WHERE COC_MODEL      = :SPA-MODEL
+              AND   COC_MANF       = :SPA-MANF-CODE
+              AND   COC_TYPE       = :SPA-TYPE
+              AND   COC_START_DATE = :WS-SDATE-DB2
+              AND   COC_END_DATE   = :WS-EDATE-DB2
+              AND   COC_FIELD_NO  IN ( '0.2' , '0.7')
+              AND   COC_COUNTRY = 'UB'
+./ ADD NAME=R1HATVAC
+      *    CPYKEY FOR READNXT1 OF HATVAC TABLE
+      *    CPYKEY FOR READNXT3 OF HATVAC TABLE
+
+      ****************************************************************
+      *                                                              *
+      * KEY FOR READNEXT OF HATVAC TABLE                             *
+      *                                                              *
+      ****************************************************************
+
+              WHERE VAC_MODEL      = :SPA-MODEL
+              AND   VAC_MANF       = :SPA-MANF-CODE
+              AND   VAC_TYPE       = :SPA-TYPE
+              AND   VAC_START_DATE = :WS-SDATE-DB2
+              AND   VAC_END_DATE   = :WS-EDATE-DB2
+              AND   VAC_VARIANT    = :SPA-VARIANT
+              AND   VAC_FIELD_NO   IN ('0.6','38')
+./ ADD NAME=R3HATCOC
+      *    KEY FOR READNXT3 ON COC
+      *    DEFAULT GENERATED DATA ACCESS
+      *    DEFAULT CALL: ** U-100-READNXT3-HATCOC *
+              WHERE   (COC_MODEL = :SPA-MODEL
+                 AND   COC_MANF = :SPA-MANF-CODE
+                 AND   COC_TYPE = :SPA-TYPE
+                 AND   COC_START_DATE = :WS-SDATE-DB2
+                 AND   COC_END_DATE = :WS-EDATE-DB2
+                 AND   COC_FIELD_NO = :WS-FIELD-NO
+                 AND   COC_SUB_FIELD = :WS-SUB-FIELD
+                 AND   COC_TIMESTAMP = :WS-TIMESTAMP)
+      *
+./ ADD NAME=R3HATVAC
+      *    CPYKEY FOR READNXT3 ON HATVAC TABLE
+      *    DEFAULT GENERATED DATA ACCESS
+      *    DEFAULT CALL: ** U-100-READNXT3-HATVAC *
+              WHERE   (VAC_MODEL = :SPA-MODEL
+                 AND   VAC_MANF = :SPA-MANF-CODE
+                 AND   VAC_TYPE = :SPA-TYPE
+                 AND   VAC_START_DATE = :WS-SDATE-DB2
+                 AND   VAC_END_DATE = :WS-EDATE-DB2
+                 AND   VAC_VARIANT  = :SPA-VARIANT
+                 AND   VAC_FIELD_NO = :WS-FIELD-NO
+                 AND   VAC_SUB_FIELD = :WS-SUB-FIELD
+                 AND   VAC_TIMESTAMP = :WS-TIMESTAMP)
+      *
+./ ADD NAME=UPHATCOC
+      *    CPYKEY  FOR UPDATE TO HATCOC
+      *    CPYCALL FOR UPDATE TO HATCOC
+      *    DEFAULT GENERATED DATA ACCESS
+      *    DEFAULT CALL: ** U-100-UPDATE-HATCOC ***
+
+              WHERE   (COC_MODEL = :SPA-MODEL
+                 AND   COC_MANF = :SPA-MANF-CODE
+                 AND   COC_TYPE = :SPA-TYPE
+                 AND   COC_START_DATE = :WS-SDATE-DB2
+                 AND   COC_END_DATE = :WS-EDATE-DB2
+                 AND   COC_FIELD_NO = :WS-FIELD-NO
+                 AND   COC_SUB_FIELD = :WS-SUB-FIELD
+                 AND   COC_COUNTRY   = :WS-COUNTRY  )
+./ ADD NAME=UPHATVAC
+      *    COPYKEY FOR UPDATE OF HATVAC TABLE
+      *    DEFAULT GENERATED DATA ACCESS
+      *    DEFAULT CALL: ** U-100-UPDATE-HATVAC ***
+
+              WHERE   (VAC_MODEL = :SPA-MODEL
+                 AND   VAC_MANF = :SPA-MANF-CODE
+                 AND   VAC_TYPE = :SPA-TYPE
+                 AND   VAC_START_DATE = :WS-SDATE-DB2
+                 AND   VAC_END_DATE = :WS-EDATE-DB2
+                 AND   VAC_VARIANT  = :SPA-VARIANT
+                 AND   VAC_FIELD_NO = :WS-FIELD-NO
+                 AND   VAC_SUB_FIELD = :WS-SUB-FIELD )
+./ ADD NAME=WKAREA
+
+      ****************************************************************
+      *                                                              *
+      *  WORK AREA FOR ONLINE PROGRAM HAIM03U                        *
+      *                                                              *
+      ****************************************************************
+
+
+       01 WS-FIELD-DEFINITION.
+                 05 WS-APP-NO                    PIC X(16).
+                 05 WS-VINPLATE-UB1              PIC X(18).
+                 05 WS-VINPLATE-UB2              PIC X(18).
+                 05 WS-VINPLATE-UB3              PIC X(18).
+                 05 WS-VINPLATE-UB4              PIC X(50).
+                 05 WS-LOCATION-OF-VIN           PIC X(70).
+                 05 WS-LOCATION-OF-VIN2          PIC X(70).
+                 05 WS-COMMERCIAL-DESC-UB        PIC X(30).
+                 05 WS-REMARKS-UB1               PIC X(75).
+                 05 WS-REMARKS-UB2               PIC X(75).
+                 05 WS-REMARKS-UB3               PIC X(75).
+                 05 WS-REMARKS-UB4               PIC X(75).
+                 05 WS-REMARKS-UB5               PIC X(75).
+                 05 WS-REMARKS-UB6               PIC X(75).
+                 05 WS-REMARKS-UB7               PIC X(75).
+                 05 WS-REMARKS-UB8               PIC X(75).
+                 05 WS-REMARKS-UB9               PIC X(75).
+                 05 WS-REMARKS-UB10              PIC X(75).
+
+       01 WS-OTH-VARIABLES.
+
+                 05 WS-TIMESTAMP                 PIC X(26).
+                 05 WS-FIELD-NO                  PIC X(5).
+                 05 WS-HAIMALOG                  PIC X(8)
+                                                 VALUE 'HAIMALOG'.
+                 05 WS-SUB-FIELD                 PIC X(3).
+                 05 WS-COUNTRY                   PIC X(2).
+                 05 WS-COC-VALUE                 PIC X(75).
+
+       01 WS-FLAGS.
+
+                 05 WS-ERROR-INDICATOR           PIC X VALUE SPACE.
+                    88 WS-ERROR                        VALUE 'Y'.
+       01 WS-DATE-VARIABLES.
+
+                 05 WS-SDATE-DB2                 PIC X(10).
+                 05 WS-EDATE-DB2                 PIC X(10)
+                                                 VALUE '9999-12-31'.
+                 05 WS-DATE-IN.
+                    10 WS-DATE-IN-YYYY           PIC X(4).
+                    10 FILLER                    PIC X.
+                    10 WS-DATE-IN-MM             PIC XX.
+                    10 FILLER                    PIC X.
+                    10 WS-DATE-IN-DD             PIC XX.
+                 05 WS-CONVERTED-DATE.
+                    10 WS-DATE-CON-DD            PIC XX.
+                    10 FILLER                    PIC X VALUE '/'.
+                    10 WS-DATE-CON-MM            PIC XX.
+                    10 FILLER                    PIC X VALUE '/'.
+                    10 WS-DATE-CON-YYYY          PIC X(4).
